@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Text.Json;
+using System.Windows.Forms;
+
 namespace PSPKerrdige
 {
     internal static class Program
@@ -8,10 +13,20 @@ namespace PSPKerrdige
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            try
+            {
+                var items = LoadFile.LoadItemsFromJson("Data/datafile.json");
+                if (items == null)
+                {
+                    throw new Exception("Deserialized items are null.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
