@@ -13,14 +13,28 @@ namespace PSPKerrdige
             ApplicationConfiguration.Initialize();
             Application.Run(new Menu());
         }
-        
-        static void LoadFile()
+
+        static void LoadItems()
         {
-            // Load the file
+            string FileName = "Items.txt";
+            Item.Items.Clear();
+
+            using (StreamReader Sr = new StreamReader(FileName))
+            {
+                while (!Sr.EndOfStream)
+                {
+                    string[] ItemData = Sr.ReadLine().Split(' ');
+
+                    float Mass = Convert.ToSingle(ItemData[0]);
+                    float Volume = Convert.ToSingle(ItemData[1]);
+                    float Width = Convert.ToSingle(ItemData[2]);
+                    float Height = Convert.ToSingle(ItemData[3]);
+                    string Name = ItemData[4];
+                    string Type = ItemData[5];
+
+                    Item.Items.Add(new Item(Mass, Volume, Width, Height, Name, Type));
+                }
+            }
         }
     }
-    
-
-    
-    
 }

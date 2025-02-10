@@ -8,7 +8,9 @@ public class Item
     public float Height { get; set; }
     public string Name { get; set; }
     public string Type { get; set; }
-    
+
+    public static List<Item> Items = new List<Item>();
+
     public Item(float mass, float volume, float width, float height, string name, string type)
     {
         Mass = mass;
@@ -18,11 +20,9 @@ public class Item
         Name = name;
         Type = type;
     }
-    
+
     public string PrintItem()
     {
         return $"{Name} Type: {Type} Mass: {Mass} Volume: {Volume} Width: {Width} Height: {Height}";
     }
-    
-    
 }

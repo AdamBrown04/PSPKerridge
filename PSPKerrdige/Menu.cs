@@ -6,5 +6,11 @@ namespace PSPKerrdige
         {
             InitializeComponent();
         }
+
+        private void ViewItems_Click(object sender, EventArgs e)
+        {
+            ViewItems viewItems = new ViewItems();
+            viewItems.Show();
+        }
     }
 }

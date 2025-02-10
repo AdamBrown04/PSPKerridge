@@ -51,6 +51,7 @@
             ViewItems.TabIndex = 1;
             ViewItems.Text = "View Items";
             ViewItems.UseVisualStyleBackColor = true;
+            ViewItems.Click += ViewItems_Click;
             // 
             // SortItems
             // 
