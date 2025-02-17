@@ -31,6 +31,8 @@
             btn_FileFind = new Button();
             btn_FileConfirm = new Button();
             btn_Return = new Button();
+            lbl_fileSelected = new Label();
+            txb_FileSelected = new TextBox();
             SuspendLayout();
             // 
             // btn_FileFind
@@ -41,11 +43,12 @@
             btn_FileFind.TabIndex = 0;
             btn_FileFind.Text = "Select a File";
             btn_FileFind.UseVisualStyleBackColor = true;
+            btn_FileFind.Click += btn_FileFind_Click;
             // 
             // btn_FileConfirm
             // 
             btn_FileConfirm.BackColor = SystemColors.Info;
-            btn_FileConfirm.Location = new Point(12, 77);
+            btn_FileConfirm.Location = new Point(12, 110);
             btn_FileConfirm.Name = "btn_FileConfirm";
             btn_FileConfirm.Size = new Size(391, 49);
             btn_FileConfirm.TabIndex = 1;
@@ -55,7 +58,7 @@
             // btn_Return
             // 
             btn_Return.BackColor = SystemColors.Info;
-            btn_Return.Location = new Point(12, 132);
+            btn_Return.Location = new Point(12, 165);
             btn_Return.Name = "btn_Return";
             btn_Return.Size = new Size(391, 49);
             btn_Return.TabIndex = 2;
@@ -63,18 +66,38 @@
             btn_Return.UseVisualStyleBackColor = false;
             btn_Return.Click += btn_Return_Click;
             // 
+            // lbl_fileSelected
+            // 
+            lbl_fileSelected.AutoSize = true;
+            lbl_fileSelected.Location = new Point(12, 76);
+            lbl_fileSelected.Name = "lbl_fileSelected";
+            lbl_fileSelected.Size = new Size(94, 20);
+            lbl_fileSelected.TabIndex = 3;
+            lbl_fileSelected.Text = "File selected:";
+            // 
+            // txb_FileSelected
+            // 
+            txb_FileSelected.Location = new Point(112, 73);
+            txb_FileSelected.Name = "txb_FileSelected";
+            txb_FileSelected.ReadOnly = true;
+            txb_FileSelected.Size = new Size(291, 27);
+            txb_FileSelected.TabIndex = 4;
+            // 
             // SelectFileForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(415, 193);
+            ClientSize = new Size(415, 222);
+            Controls.Add(txb_FileSelected);
+            Controls.Add(lbl_fileSelected);
             Controls.Add(btn_Return);
             Controls.Add(btn_FileConfirm);
             Controls.Add(btn_FileFind);
             Name = "SelectFileForm";
             Text = "Select File";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -82,5 +105,7 @@
         private Button btn_FileFind;
         private Button btn_FileConfirm;
         private Button btn_Return;
+        private Label lbl_fileSelected;
+        private TextBox txb_FileSelected;
     }
 }
