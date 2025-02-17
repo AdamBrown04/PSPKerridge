@@ -28,7 +28,7 @@ namespace PSPKerrdige
         private void btn_FileFind_Click(object sender, EventArgs e)
         {
             //Open file dialog and settings
-            //source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
+            //code source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
             openFileDialog.RestoreDirectory = true;

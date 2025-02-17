@@ -89,6 +89,7 @@ namespace PSPKerrdige
             btn_CalculateLoads.TabIndex = 4;
             btn_CalculateLoads.Text = "Calculate Optimum Loading Method";
             btn_CalculateLoads.UseVisualStyleBackColor = false;
+            btn_CalculateLoads.Click += btn_CalculateLoads_Click;
             // 
             // lbl_FileSelected
             // 

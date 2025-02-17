@@ -18,9 +18,26 @@ namespace PSPKerrdige
             System.Windows.Forms.Application.Exit();
         }
 
-        public void getData(string passThrough)
+        public void getData(string filePath)
         {
-            txb_FilePath.Text = passThrough;
+            //updated text box to show the file path 
+            txb_FilePath.Text = filePath;
+        }
+
+        private void btn_CalculateLoads_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var items = LoadFile.LoadItemsFromJson(txb_FilePath.Text);
+                if (items == null)
+                {
+                    throw new Exception("Deserialized items are null.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
