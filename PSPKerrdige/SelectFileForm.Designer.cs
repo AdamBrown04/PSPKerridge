@@ -54,6 +54,7 @@
             btn_FileConfirm.TabIndex = 1;
             btn_FileConfirm.Text = "Confirm File";
             btn_FileConfirm.UseVisualStyleBackColor = false;
+            btn_FileConfirm.Click += btn_FileConfirm_Click;
             // 
             // btn_Return
             // 
@@ -77,6 +78,7 @@
             // 
             // txb_FileSelected
             // 
+            txb_FileSelected.Enabled = false;
             txb_FileSelected.Location = new Point(112, 73);
             txb_FileSelected.Name = "txb_FileSelected";
             txb_FileSelected.ReadOnly = true;
