@@ -27,6 +27,7 @@ namespace PSPKerrdige
             {
                 MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Application.Run(new HomeForm());
         }
     }
 }
