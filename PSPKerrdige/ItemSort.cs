@@ -7,7 +7,7 @@ public class ItemSort
     private Stack<(Item Item, Lorry SourceLorry, Lorry DestinationLorry)> MoveStack = new Stack<(Item, Lorry, Lorry)>();
 
     public int FitnessFunction()
-    {
+    {//
         return Lorries.Count(Lorry => Lorry.LoadedItems.Count > 0);
     }
 
@@ -34,7 +34,8 @@ public class ItemSort
     {
         if (MoveStack.Count > 0)
         {
-            (Item Item, Lorry SourceLorry, Lorry DestinationLorry) LastMove = MoveStack.Pop();
+            (Item Item, Lorry SourceLorry, Lorry DestinationLorry)
+                LastMove = MoveStack.Pop();
             LastMove.DestinationLorry.RemoveItem(LastMove.Item);
             LastMove.SourceLorry.MoveItem(LastMove.Item);
         }
