@@ -12,7 +12,7 @@ namespace PSPKerrdige
             string jsonString = File.ReadAllText(filePath);
             var itemDataList = JsonSerializer.Deserialize<List<ItemData>>(jsonString) ?? new List<ItemData>();
             return ConvertItems(itemDataList);
-        }//
+        }
 
         private static List<Item> ConvertItems(List<ItemData> itemDataList)
         {
