@@ -9,7 +9,11 @@ namespace PSPKerrdige
 
         private void btn_FileSelect_Click(object sender, EventArgs e)
         {
+
+            SelectFileForm selectFileForm = new SelectFileForm();
+
             SelectFileForm selectFileForm = new SelectFileForm(this);
+
             selectFileForm.Show();
         }
 
@@ -17,6 +21,7 @@ namespace PSPKerrdige
         {
             System.Windows.Forms.Application.Exit();
         }
+
 
         public void getData(string filePath)
         {
@@ -39,5 +44,6 @@ namespace PSPKerrdige
                 MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

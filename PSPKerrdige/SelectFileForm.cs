@@ -12,12 +12,18 @@ namespace PSPKerrdige
 {
     public partial class SelectFileForm : Form
     {
+
+        public SelectFileForm()
+        {
+            InitializeComponent();
+
         //create an instantce of the HomeForm class to be able to move data between forms
         private HomeForm homeForm;
         public SelectFileForm(HomeForm homeForm)
         {
             InitializeComponent();
             this.homeForm = homeForm;
+
         }
 
         private void btn_Return_Click(object sender, EventArgs e)
@@ -28,7 +34,11 @@ namespace PSPKerrdige
         private void btn_FileFind_Click(object sender, EventArgs e)
         {
             //Open file dialog and settings
+
+            //source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
+
             //code source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
             openFileDialog.RestoreDirectory = true;
@@ -43,11 +53,16 @@ namespace PSPKerrdige
             openFileDialog.CheckFileExists = true;
             openFileDialog.CheckPathExists = true;
 
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
+
             {
                 txb_FileSelected.Text = openFileDialog.FileName;
             }
         }
+
 
         private void btn_FileConfirm_Click(object sender, EventArgs e)
         {
@@ -66,5 +81,6 @@ namespace PSPKerrdige
             }
             
         }
+
     }
 }
