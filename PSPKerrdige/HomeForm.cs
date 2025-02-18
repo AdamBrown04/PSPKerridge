@@ -25,7 +25,7 @@ namespace PSPKerrdige
 
         public void getData(string filePath)
         {
-            //updated text box to show the file path 
+            //update text box to show the file path 
             txb_FilePath.Text = filePath;
         }
 
