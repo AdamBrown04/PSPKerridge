@@ -1,62 +1,45 @@
 namespace PSPKerrdige;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ItemSort
 {
     public List<Lorry> Lorries { get; set; } = new List<Lorry>();
     public List<Item> Items { get; set; } = new List<Item>();
-    private Stack<(Item Item, Lorry SourceLorry, Lorry DestinationLorry)> MoveStack = new Stack<(Item, Lorry, Lorry)>();
 
-    public int FitnessFunction()
-    {//
-        return Lorries.Count(Lorry => Lorry.LoadedItems.Count > 0);
-    }
-
-    public void MoveSelectedItem()
+    public void FirstFitDecreasing(float Weight, float Volume)
     {
-        Random Random = new Random();
-        Item SelectedItem = Items[Random.Next(Items.Count)];
-        Lorry SourceLorry = Lorries.First(Lorry => Lorry.LoadedItems.Contains(SelectedItem));
+        Items = Items.OrderByDescending(Item => Item.Volume).ToList();
 
-        Lorry DestinationLorry;
-        do
+        foreach (Item Item in Items)
         {
-            DestinationLorry = Lorries[Random.Next(Lorries.Count)];
-        } while (DestinationLorry == SourceLorry);
+            bool Placed = false;
 
-        if (DestinationLorry.MoveItem(SelectedItem))
-        {
-            SourceLorry.RemoveItem(SelectedItem);
-            MoveStack.Push((SelectedItem, SourceLorry, DestinationLorry));
-        }
-    }
-
-    public void Backtrack()
-    {
-        if (MoveStack.Count > 0)
-        {
-            (Item Item, Lorry SourceLorry, Lorry DestinationLorry)
-                LastMove = MoveStack.Pop();
-            LastMove.DestinationLorry.RemoveItem(LastMove.Item);
-            LastMove.SourceLorry.MoveItem(LastMove.Item);
-        }
-    }
-
-    public int HillClimbing(int Iterations)
-    {
-        int TotalFitnessValue = FitnessFunction();
-        for (int i = 0; i < Iterations; i++)
-        {
-            MoveSelectedItem();
-            int NewFitnessValue = FitnessFunction();
-            if (NewFitnessValue > TotalFitnessValue)
+            foreach (Lorry Lorry in Lorries)
             {
-                Backtrack();
+                if (Lorry.MoveItem(Item))
+                {
+                    Placed = true;
+                    break;
+                }
             }
-            else
+
+            if (!Placed)
             {
-                TotalFitnessValue = NewFitnessValue;
+                Lorry NewLorry = new Lorry(0, Lorries.Count + 1, Weight, Volume);
+                NewLorry.MoveItem(Item);
+                Lorries.Add(NewLorry);
             }
         }
-        return TotalFitnessValue;
+    }
+
+    public void DisplayResults()
+    {
+        Console.WriteLine("Total Lorries Used: " + Lorries.Count);
+        foreach (Lorry Lorry in Lorries)
+        {
+            Lorry.DisplayResults();
+        }
     }
 }
