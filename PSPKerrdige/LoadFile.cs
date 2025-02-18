@@ -23,7 +23,8 @@ namespace PSPKerrdige
                     int.Parse(data.Count_ID ?? "0"),
                     float.Parse(data.Height ?? "0"),
                     float.Parse(data.Length ?? "0"),
-                    float.Parse(data.SurfaceArea ?? "0"), data.Type ?? string.Empty,
+                    float.Parse(data.SurfaceArea ?? "0"),
+                    data.Type ?? string.Empty,
                     float.Parse(data.Volume ?? "0"),
                     float.Parse(data.Weight ?? "0"),
                     float.Parse(data.Width ?? "0")
