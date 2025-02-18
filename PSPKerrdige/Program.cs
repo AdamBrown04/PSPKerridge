@@ -14,9 +14,10 @@ namespace PSPKerrdige
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-
+            
             try
             {
+                //Copy Data file to the debug folder if erroring
                 var items = LoadFile.LoadItemsFromJson("Data/datafile.json");
                 if (items == null)
                 {
@@ -27,6 +28,7 @@ namespace PSPKerrdige
             {
                 MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Application.Run(new HomeForm());
         }
     }
 }

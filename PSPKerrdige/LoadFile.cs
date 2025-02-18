@@ -12,7 +12,7 @@ namespace PSPKerrdige
             string jsonString = File.ReadAllText(filePath);
             var itemDataList = JsonSerializer.Deserialize<List<ItemData>>(jsonString) ?? new List<ItemData>();
             return ConvertItems(itemDataList);
-        }//
+        }
 
         private static List<Item> ConvertItems(List<ItemData> itemDataList)
         {
@@ -21,9 +21,11 @@ namespace PSPKerrdige
             {
                 items.Add(new Item(
                     int.Parse(data.Count_ID ?? "0"),
+                    int.Parse(data.Count_Id ?? "0"),
                     float.Parse(data.Height ?? "0"),
                     float.Parse(data.Length ?? "0"),
-                    float.Parse(data.SurfaceArea ?? "0"), data.Type ?? string.Empty,
+                    float.Parse(data.SurfaceArea ?? "0"),
+                    data.Type ?? string.Empty,
                     float.Parse(data.Volume ?? "0"),
                     float.Parse(data.Weight ?? "0"),
                     float.Parse(data.Width ?? "0")
@@ -36,6 +38,7 @@ namespace PSPKerrdige
     public class ItemData
     {
         public string Count_ID { get; set; }
+        public string Count_Id { get; set; }
         public string Height { get; set; }
         public string Length { get; set; }
         public string SurfaceArea { get; set; }
