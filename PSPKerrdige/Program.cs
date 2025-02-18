@@ -14,9 +14,10 @@ namespace PSPKerrdige
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-
+            
             try
             {
+                //Copy Data file to the debug folder if erroring
                 var items = LoadFile.LoadItemsFromJson("Data/datafile.json");
                 if (items == null)
                 {
