@@ -16,6 +16,7 @@ namespace PSPKerrdige
         public SelectFileForm()
         {
             InitializeComponent();
+        }
 
         //create an instantce of the HomeForm class to be able to move data between forms
         private HomeForm homeForm;
@@ -34,9 +35,6 @@ namespace PSPKerrdige
         private void btn_FileFind_Click(object sender, EventArgs e)
         {
             //Open file dialog and settings
-
-            //source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
-
             //code source: https://www.csharp.com/UploadFile/mahesh/openfiledialog-in-C-Sharp/
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -52,9 +50,6 @@ namespace PSPKerrdige
             //check file and path exists
             openFileDialog.CheckFileExists = true;
             openFileDialog.CheckPathExists = true;
-
-
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
 

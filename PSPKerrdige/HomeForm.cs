@@ -9,9 +9,6 @@ namespace PSPKerrdige
 
         private void btn_FileSelect_Click(object sender, EventArgs e)
         {
-
-            SelectFileForm selectFileForm = new SelectFileForm();
-
             SelectFileForm selectFileForm = new SelectFileForm(this);
 
             selectFileForm.Show();
