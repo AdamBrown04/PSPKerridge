@@ -37,7 +37,7 @@ namespace PSPKerrdige
             txb_FilePath = new TextBox();
             txb_Solution = new RichTextBox();
             lbl_Solution = new Label();
-            txb_NumOfLorries = new TextBox();
+            lbl_NumOfLorries = new Label();
             SuspendLayout();
             // 
             // btn_FileSelect
@@ -125,14 +125,14 @@ namespace PSPKerrdige
             lbl_Solution.TabIndex = 8;
             lbl_Solution.Text = "Total Amount of Lorries:";
             // 
-            // txb_NumOfLorries
+            // lbl_NumOfLorries
             // 
-            txb_NumOfLorries.Location = new Point(186, 549);
-            txb_NumOfLorries.Name = "txb_NumOfLorries";
-            txb_NumOfLorries.ReadOnly = true;
-            txb_NumOfLorries.Size = new Size(84, 27);
-            txb_NumOfLorries.TabIndex = 9;
-            txb_NumOfLorries.TextAlign = HorizontalAlignment.Center;
+            lbl_NumOfLorries.AutoSize = true;
+            lbl_NumOfLorries.Location = new Point(186, 552);
+            lbl_NumOfLorries.Name = "lbl_NumOfLorries";
+            lbl_NumOfLorries.Size = new Size(30, 20);
+            lbl_NumOfLorries.TabIndex = 9;
+            lbl_NumOfLorries.Text = "NA";
             // 
             // HomeForm
             // 
@@ -140,7 +140,7 @@ namespace PSPKerrdige
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(992, 581);
-            Controls.Add(txb_NumOfLorries);
+            Controls.Add(lbl_NumOfLorries);
             Controls.Add(lbl_Solution);
             Controls.Add(txb_Solution);
             Controls.Add(txb_FilePath);
@@ -167,6 +167,6 @@ namespace PSPKerrdige
         private TextBox txb_FilePath;
         private RichTextBox txb_Solution;
         private Label lbl_Solution;
-        private TextBox txb_NumOfLorries;
+        private Label lbl_NumOfLorries;
     }
 }
