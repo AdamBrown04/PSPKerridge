@@ -52,6 +52,7 @@ namespace PSPKerrdige
             // btn_FileSave
             // 
             btn_FileSave.BackColor = SystemColors.Info;
+            btn_FileSave.Enabled = false;
             btn_FileSave.Location = new Point(632, 106);
             btn_FileSave.Name = "btn_FileSave";
             btn_FileSave.Size = new Size(353, 55);

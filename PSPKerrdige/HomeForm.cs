@@ -50,7 +50,7 @@ namespace PSPKerrdige
                     int iterations = 500000;
                    float finalFitnessValue = itemSwap.HillClimbing(iterations);
 
-                    
+                    btn_FileSave.Enabled = true;
                     txb_Solution.Text = itemSort.DisplayResults();
                     
                 }
