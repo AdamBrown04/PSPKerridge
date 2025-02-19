@@ -37,22 +37,22 @@ namespace PSPKerrdige
                 }
                 else
                 {
-                    
-                    ItemSort itemSort = new ItemSort {Items = items };
+
+                    ItemSort itemSort = new ItemSort { Items = items };
 
                     float weight = 10000f;
                     float volume = 109760000f;
 
                     itemSort.FirstFitDecreasing(weight, volume);
-                    
-                    ItemSwap itemSwap = new ItemSwap {Items = items, Lorries = itemSort.Lorries};
-                    
+
+                    ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
+
                     int iterations = 500000;
-                   float finalFitnessValue = itemSwap.HillClimbing(iterations);
+                    float finalFitnessValue = itemSwap.HillClimbing(iterations);
 
                     btn_FileSave.Enabled = true;
                     txb_Solution.Text = itemSort.DisplayResults();
-                    
+
                 }
             }
             catch (Exception ex)
@@ -61,5 +61,13 @@ namespace PSPKerrdige
             }
         }
 
+        private void btn_FileSave_Click(object sender, EventArgs e)
+        {
+            FileStream outputSolution = new FileStream("solution.txt", FileMode.Create);
+            StreamWriter writer = new StreamWriter(outputSolution);
+            writer.Write(txb_Solution.Text);
+            writer.Close();
+            outputSolution.Close();
+        }
     }
 }

@@ -59,6 +59,7 @@ namespace PSPKerrdige
             btn_FileSave.TabIndex = 2;
             btn_FileSave.Text = "Save Output to File";
             btn_FileSave.UseVisualStyleBackColor = false;
+            btn_FileSave.Click += btn_FileSave_Click;
             // 
             // btn_ExitProgram
             // 
