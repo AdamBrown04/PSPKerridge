@@ -63,11 +63,22 @@ namespace PSPKerrdige
 
         private void btn_FileSave_Click(object sender, EventArgs e)
         {
-            FileStream outputSolution = new FileStream("solution.txt", FileMode.Create);
-            StreamWriter writer = new StreamWriter(outputSolution);
-            writer.Write(txb_Solution.Text);
-            writer.Close();
-            outputSolution.Close();
+            try
+            {
+                string fileName = "solution.txt";
+                FileStream outputSolution = new FileStream(fileName, FileMode.Create);
+                StreamWriter writer = new StreamWriter(outputSolution);
+                writer.Write(txb_Solution.Text);
+                writer.Close();
+                outputSolution.Close();
+
+                MessageBox.Show("Solution saved to solution.txt", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
