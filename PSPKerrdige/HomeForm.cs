@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace PSPKerrdige
 {
     public partial class HomeForm : Form
@@ -47,7 +49,7 @@ namespace PSPKerrdige
 
                     ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
 
-                    int iterations = 500000;
+                    int iterations = 500;
                     float finalFitnessValue = itemSwap.HillClimbing(iterations);
 
                     btn_FileSave.Enabled = true;
@@ -63,18 +65,23 @@ namespace PSPKerrdige
 
         private void btn_FileSave_Click(object sender, EventArgs e)
         {
-            try
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.InitialDirectory = "c:\\";
+
+            folderBrowserDialog.ShowNewFolderButton = true;
+            DialogResult result = folderBrowserDialog.ShowDialog();
+            if (result == DialogResult.OK)
             {
+                string folderPath = folderBrowserDialog.SelectedPath;
                 string fileName = "solution.txt";
-                FileStream outputSolution = new FileStream(fileName, FileMode.Create);
+                FileStream outputSolution = new FileStream(folderPath + "\\" + fileName, FileMode.Create);
                 StreamWriter writer = new StreamWriter(outputSolution);
                 writer.Write(txb_Solution.Text);
                 writer.Close();
                 outputSolution.Close();
-
                 MessageBox.Show("Solution saved to solution.txt", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch
+            else
             {
                 MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
