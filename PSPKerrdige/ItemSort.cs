@@ -42,12 +42,14 @@ public class ItemSort
         }
     }
 
-    public void DisplayResults()
+    public string DisplayResults()
     {
-        Console.WriteLine("Total Lorries Used: " + Lorries.Count);
+        // Console.WriteLine("Total Lorries Used: " + Lorries.Count);
+        string result = "";
         foreach (Lorry Lorry in Lorries)
         {
-            Lorry.DisplayResults();
+            result += Lorry.DisplayResults() + "\n";
         }
+        return result;
     }
 }

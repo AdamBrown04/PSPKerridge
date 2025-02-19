@@ -29,53 +29,21 @@ namespace PSPKerrdige
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            txb_Solution = new TextBox();
-
             btn_FileSelect = new Button();
             btn_FileSave = new Button();
             btn_ExitProgram = new Button();
             btn_CalculateLoads = new Button();
-
-            SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(12, 12);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(475, 426);
-            textBox1.TabIndex = 0;
-
             lbl_FileSelected = new Label();
             txb_FilePath = new TextBox();
+            txb_Solution = new RichTextBox();
             SuspendLayout();
-            // 
-            // txb_Solution
-            // 
-            txb_Solution.Enabled = false;
-            txb_Solution.Location = new Point(12, 12);
-            txb_Solution.Multiline = true;
-            txb_Solution.Name = "txb_Solution";
-            txb_Solution.ReadOnly = true;
-            txb_Solution.Size = new Size(475, 426);
-            txb_Solution.TabIndex = 0;
-
             // 
             // btn_FileSelect
             // 
             btn_FileSelect.BackColor = SystemColors.Info;
-
-            btn_FileSelect.Location = new Point(493, 12);
-            btn_FileSelect.Name = "btn_FileSelect";
-            btn_FileSelect.Size = new Size(301, 55);
-
-            btn_FileSelect.Location = new Point(493, 42);
+            btn_FileSelect.Location = new Point(632, 45);
             btn_FileSelect.Name = "btn_FileSelect";
             btn_FileSelect.Size = new Size(353, 55);
-
             btn_FileSelect.TabIndex = 1;
             btn_FileSelect.Text = "Select File";
             btn_FileSelect.UseVisualStyleBackColor = false;
@@ -84,28 +52,21 @@ namespace PSPKerrdige
             // btn_FileSave
             // 
             btn_FileSave.BackColor = SystemColors.Info;
-
-            btn_FileSave.Location = new Point(493, 73);
-            btn_FileSave.Name = "btn_FileSave";
-            btn_FileSave.Size = new Size(301, 55);
-             btn_FileSave.Location = new Point(493, 103);
+            btn_FileSave.Enabled = false;
+            btn_FileSave.Location = new Point(632, 106);
             btn_FileSave.Name = "btn_FileSave";
             btn_FileSave.Size = new Size(353, 55);
-
             btn_FileSave.TabIndex = 2;
             btn_FileSave.Text = "Save Output to File";
             btn_FileSave.UseVisualStyleBackColor = false;
+            btn_FileSave.Click += btn_FileSave_Click;
             // 
             // btn_ExitProgram
             // 
             btn_ExitProgram.BackColor = SystemColors.Info;
-            btn_ExitProgram.Location = new Point(493, 367);
+            btn_ExitProgram.Location = new Point(632, 469);
             btn_ExitProgram.Name = "btn_ExitProgram";
-
-            btn_ExitProgram.Size = new Size(301, 71);
-
             btn_ExitProgram.Size = new Size(353, 71);
-
             btn_ExitProgram.TabIndex = 3;
             btn_ExitProgram.Text = "Exit Program";
             btn_ExitProgram.UseVisualStyleBackColor = false;
@@ -114,14 +75,8 @@ namespace PSPKerrdige
             // btn_CalculateLoads
             // 
             btn_CalculateLoads.BackColor = SystemColors.Info;
-            btn_CalculateLoads.Location = new Point(493, 290);
+            btn_CalculateLoads.Location = new Point(632, 392);
             btn_CalculateLoads.Name = "btn_CalculateLoads";
-
-            btn_CalculateLoads.Size = new Size(301, 71);
-            btn_CalculateLoads.TabIndex = 4;
-            btn_CalculateLoads.Text = "Calculate Optimum Loading Method";
-            btn_CalculateLoads.UseVisualStyleBackColor = false;
-
             btn_CalculateLoads.Size = new Size(353, 71);
             btn_CalculateLoads.TabIndex = 4;
             btn_CalculateLoads.Text = "Calculate Optimum Loading Method";
@@ -131,7 +86,7 @@ namespace PSPKerrdige
             // lbl_FileSelected
             // 
             lbl_FileSelected.AutoSize = true;
-            lbl_FileSelected.Location = new Point(493, 12);
+            lbl_FileSelected.Location = new Point(632, 15);
             lbl_FileSelected.Name = "lbl_FileSelected";
             lbl_FileSelected.Size = new Size(96, 20);
             lbl_FileSelected.TabIndex = 5;
@@ -140,34 +95,34 @@ namespace PSPKerrdige
             // txb_FilePath
             // 
             txb_FilePath.Enabled = false;
-            txb_FilePath.Location = new Point(595, 9);
+            txb_FilePath.Location = new Point(734, 12);
             txb_FilePath.Name = "txb_FilePath";
             txb_FilePath.ReadOnly = true;
             txb_FilePath.Size = new Size(251, 27);
             txb_FilePath.TabIndex = 6;
-
+            // 
+            // txb_Solution
+            // 
+            txb_Solution.Location = new Point(12, 12);
+            txb_Solution.Name = "txb_Solution";
+            txb_Solution.ReadOnly = true;
+            txb_Solution.Size = new Size(614, 522);
+            txb_Solution.TabIndex = 7;
+            txb_Solution.Text = "";
             // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-
-            ClientSize = new Size(800, 446);
-
-            ClientSize = new Size(858, 446);
+            ClientSize = new Size(992, 546);
+            Controls.Add(txb_Solution);
             Controls.Add(txb_FilePath);
             Controls.Add(lbl_FileSelected);
-
             Controls.Add(btn_CalculateLoads);
             Controls.Add(btn_ExitProgram);
             Controls.Add(btn_FileSave);
             Controls.Add(btn_FileSelect);
-
-            Controls.Add(textBox1);
-
-            Controls.Add(txb_Solution);
-
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "HomeForm";
             Text = "Home";
@@ -175,13 +130,7 @@ namespace PSPKerrdige
             PerformLayout();
         }
 
-
         #endregion
-
-
-        private TextBox textBox1;
-
-        private TextBox txb_Solution;
 
         private Button btn_FileSelect;
         private Button btn_FileSave;
@@ -190,5 +139,6 @@ namespace PSPKerrdige
 
         private Label lbl_FileSelected;
         private TextBox txb_FilePath;
+        private RichTextBox txb_Solution;
     }
 }
