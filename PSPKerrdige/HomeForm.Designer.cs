@@ -41,6 +41,7 @@ namespace PSPKerrdige
             // 
             // textBox1
             // 
+            textBox1.Enabled = false;
             textBox1.Location = new Point(12, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
