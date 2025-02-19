@@ -132,6 +132,7 @@ namespace PSPKerrdige
             txb_NumOfLorries.ReadOnly = true;
             txb_NumOfLorries.Size = new Size(84, 27);
             txb_NumOfLorries.TabIndex = 9;
+            txb_NumOfLorries.TextAlign = HorizontalAlignment.Center;
             // 
             // HomeForm
             // 
