@@ -54,7 +54,7 @@ namespace PSPKerrdige
 
                     btn_FileSave.Enabled = true;
                     txb_Solution.Text = itemSort.DisplayResults();
-
+                    lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                 }
             }
             catch (Exception ex)

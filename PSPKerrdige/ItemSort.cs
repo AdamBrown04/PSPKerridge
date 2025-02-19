@@ -44,12 +44,16 @@ public class ItemSort
 
     public string DisplayResults()
     {
-        // Console.WriteLine("Total Lorries Used: " + Lorries.Count);
         string result = "";
         foreach (Lorry Lorry in Lorries)
         {
             result += Lorry.DisplayResults() + "\n";
         }
         return result;
+    }
+
+    public string DisplayTotalLorries()
+    {
+        return Lorries.Count.ToString();
     }
 }
