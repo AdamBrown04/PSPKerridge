@@ -43,9 +43,11 @@ namespace PSPKerrdige
             // 
             textBox1.Enabled = false;
             textBox1.Location = new Point(12, 12);
+            textBox1.MaxLength = 3276700;
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
+            textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new Size(475, 426);
             textBox1.TabIndex = 0;
             // 
