@@ -50,7 +50,7 @@ namespace PSPKerrdige
                     int iterations = 500000;
                    float finalFitnessValue = itemSwap.HillClimbing(iterations);
 
-                    txb_Solution.MaxLength = int.MaxValue;
+                    
                     txb_Solution.Text = itemSort.DisplayResults();
                     
                 }

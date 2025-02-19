@@ -46,7 +46,7 @@ public string DisplayResults()
 {
     if (LoadedItems.Count > 0)
     {
-        return "Lorry " + Lorry_ID + ": " + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
+        return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
     }
         else
         {
