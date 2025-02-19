@@ -42,12 +42,16 @@ public class Lorry
         LoadedItems.Remove(item);
     }
 
-public void DisplayResults()
+public string DisplayResults()
 {
     if (LoadedItems.Count > 0)
     {
-        Console.WriteLine("Lorry " + Lorry_ID + ": " + string.Join(", ", LoadedItems.Select(item => "Item " + item.Weight + "kg")));
+        return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
     }
+        else
+        {
+            return "Lorry " + Lorry_ID + " is empty";
+        }
 }
     
     
