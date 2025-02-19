@@ -35,6 +35,24 @@ namespace PSPKerrdige
                 {
                     throw new Exception("Deserialized items are null.");
                 }
+                else
+                {
+                    
+                    ItemSort itemSort = new ItemSort();
+
+                    float weight = 10000f;
+                    float volume = 109760000f;
+
+                    itemSort.FirstFitDecreasing(weight, volume);
+
+                    ItemSwap itemSwap = new ItemSwap {Items = items, Lorries = itemSort.Lorries};
+
+                    int iterations = 500000;
+                    float finalFitnessValue = itemSwap.HillClimbing(iterations);
+
+                    txb_Solution.Text = itemSort.DisplayResults();
+                    
+                }
             }
             catch (Exception ex)
             {
