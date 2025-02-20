@@ -12,7 +12,6 @@ namespace PSPKerrdige
         private void btn_FileSelect_Click(object sender, EventArgs e)
         {
             SelectFileForm selectFileForm = new SelectFileForm(this);
-
             selectFileForm.Show();
         }
 
@@ -21,10 +20,8 @@ namespace PSPKerrdige
             System.Windows.Forms.Application.Exit();
         }
 
-
         public void getData(string filePath)
-        {
-            //update text box to show the file path 
+        { 
             txb_FilePath.Text = filePath;
         }
 

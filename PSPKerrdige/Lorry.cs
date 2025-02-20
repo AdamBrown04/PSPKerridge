@@ -2,13 +2,12 @@
 
 public class Lorry
 {
+    //attributes
     public float WeightCapacity { get; set; }
     public float Lorry_ID { get; set; }
     public float VolumeCapacity { get; set; }
-    
-    
     public List<Item> LoadedItems { get; set; } = new List<Item>();
-
+    //constructor
     public Lorry(float capacity, float lorry_ID, float Weightcapacity, float volumeCapacity)
     {
         WeightCapacity = Weightcapacity;
@@ -16,7 +15,7 @@ public class Lorry
         VolumeCapacity = volumeCapacity;
         
     }
-
+    //methods
     public float RemainingCapacity()
     {
         return LoadedItems.Sum(item => item.Weight);
@@ -42,17 +41,15 @@ public class Lorry
         LoadedItems.Remove(item);
     }
 
-public string DisplayResults()
-{
-    if (LoadedItems.Count > 0)
+    public string DisplayResults()
     {
-        return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
-    }
+        if (LoadedItems.Count > 0)
+        {
+            return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
+        }
         else
         {
             return "Lorry " + Lorry_ID + " is empty";
-        }
-}
-    
-    
+        }   
+    }
 }
