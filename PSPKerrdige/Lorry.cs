@@ -28,21 +28,26 @@ public class Lorry
 
     public bool MoveItem(Item item)
     {
+        // Check if the item can be moved into the lorry by checking if the weight and volume of the item is less than the remaining capacity and volume of the lorry
         if (RemainingCapacity() + item.Weight <= WeightCapacity && RemainingVolume() + item.Volume <= VolumeCapacity)
         {
+            // Add the item to the lorry and return true
             LoadedItems.Add(item);
             return true;
         }
         return false;
     }
 
+    // Remove an item from the lorry
     public void RemoveItem(Item item)
     {
+        // Removes the item from the lorry
         LoadedItems.Remove(item);
     }
 
     public string DisplayResults()
     {
+        // Display the results of the items inside each lorry
         if (LoadedItems.Count > 0)
         {
             return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => + item.Count_ID));
