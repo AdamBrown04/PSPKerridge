@@ -6,6 +6,8 @@ public class ItemSwap
     public List<Lorry> Lorries { get; set; } = new List<Lorry>();
     public List<Item> Items { get; set; } = new List<Item>();
     private Stack<(Item Item, Lorry SourceLorry, Lorry DestinationLorry)> MoveStack = new Stack<(Item, Lorry, Lorry)>();
+    // Create a random object to select random items and lorries
+    private Random Random = new Random(); 
 
     public float FitnessFunction()
     {
@@ -17,7 +19,6 @@ public class ItemSwap
     public void MoveSelectedItem()
     {
         // Select a random item and the lorry it is in
-        Random Random = new Random();
         Item SelectedItem = Items[Random.Next(Items.Count)];
         // Find the lorry the item is in and set it as the source lorry
         Lorry SourceLorry = Lorries.First(Lorry => Lorry.LoadedItems.Contains(SelectedItem));
@@ -27,9 +28,9 @@ public class ItemSwap
         do
         {
             DestinationLorry = Lorries[Random.Next(Lorries.Count)];
-        } 
+        }
         while (DestinationLorry == SourceLorry);
-        
+
         // Move the item from the source lorry to the destination lorry
         if (DestinationLorry.MoveItem(SelectedItem))
         {
@@ -38,7 +39,6 @@ public class ItemSwap
             MoveStack.Push((SelectedItem, SourceLorry, DestinationLorry));
         }
     }
-
     public void Backtrack()
     {
         // If there are moves in the stack pop the last move and undo it
