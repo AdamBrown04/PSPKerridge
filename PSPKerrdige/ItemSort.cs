@@ -9,7 +9,7 @@ public class ItemSort
     public List<Lorry> Lorries { get; set; } = new List<Lorry>();
     public List<Item> Items { get; set; } = new List<Item>();
 
-    public void FirstFitDecreasing(float Weight, float Volume)
+    public void Sort(float Weight, float Volume)
     {
         // Sort the items by weight in descending order
         Items = Items.OrderByDescending(Item => Item.Weight).ToList();
