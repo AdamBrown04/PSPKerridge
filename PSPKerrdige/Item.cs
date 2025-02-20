@@ -2,6 +2,7 @@
 
 public class Item
 {
+    //attributes
     public int Count_ID { get; set; }
     public int Count_Id { get; set; }
     public float Height { get; set; }
@@ -9,10 +10,9 @@ public class Item
     public float SurfaceArea { get; set; }
     public string Type { get; set; }
     public float Volume { get; set; }
-    public float VolumeInM { get; set; }
     public float Weight { get; set; }
     public float Width { get; set; }
-    
+    //constructor
     public Item(int count_ID, int Count_Id , float height, float length, float surfaceArea, string type, float volume, float weight, float width)
     {
         Count_ID = count_ID;
@@ -24,14 +24,9 @@ public class Item
         Volume = volume;
         Weight = weight;
         Width = width;
-        GetVolumeInM();
         CorrectID();
     }
-
-    public void GetVolumeInM()
-    {
-        VolumeInM = SurfaceArea / 1000000;
-    }
+    //methods
     /*
      This method is used as within the given data set part of the data has a different heading of Count_ID and Count_Id,
      this method is used to correct the ID to be the same.

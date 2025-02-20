@@ -7,7 +7,6 @@ public class ItemSwap
     public List<Item> Items { get; set; } = new List<Item>();
     private Stack<(Item Item, Lorry SourceLorry, Lorry DestinationLorry)> MoveStack = new Stack<(Item, Lorry, Lorry)>();
 
-    
     public float FitnessFunction()
     {
         // Return the sum of the volume of all items in all lorries as the fitness function
@@ -40,16 +39,16 @@ public class ItemSwap
         }
     }
 
-public void Backtrack()
-{
-    // If there are moves in the stack pop the last move and undo it
-    if (MoveStack.Count > 0)
+    public void Backtrack()
     {
-        (Item item, Lorry sourceLorry, Lorry destinationLorry) = MoveStack.Pop();
-        destinationLorry.RemoveItem(item);
-        sourceLorry.MoveItem(item);
+        // If there are moves in the stack pop the last move and undo it
+        if (MoveStack.Count > 0)
+        {
+            (Item item, Lorry sourceLorry, Lorry destinationLorry) = MoveStack.Pop();
+            destinationLorry.RemoveItem(item);
+            sourceLorry.MoveItem(item);
+        }
     }
-}
     public float HillClimbing(int Iterations)
     {
         // Run the hill climbing algorithm for the number of iterations set
