@@ -58,7 +58,7 @@
             // Display the results of the items inside each lorry
             if (LoadedItems.Count > 0)
             {
-                return "Lorry " + Lorry_ID + ": \n" + string.Join(", ", LoadedItems.Select(item => item.Count_ID));
+                return "Lorry " + Lorry_ID + ": \n Weight remaining: " + RemainingCapacity() + "KG\n Volume remaining: "+RemainingVolume() + "CM^3\n Items: \n"+ string.Join(", ", LoadedItems.Select(item => item.Count_ID));
             }
             else
             {
