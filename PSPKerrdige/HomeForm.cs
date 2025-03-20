@@ -30,6 +30,7 @@ namespace PSPKerrdige
             try
             {
                 var items = LoadFile.LoadItemsFromJson(txb_FilePath.Text);
+                int TotalItems = items.Count;
                 if (items == null)
                 {
                     throw new Exception("Deserialized items are null.");
@@ -52,8 +53,8 @@ namespace PSPKerrdige
 
                     btn_FileSave.Enabled = true;
                     txb_Solution.Text = itemSort.DisplayResults();
-                    lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
-                }
+                    lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries(); 
+                    lbl_TotalItems.Text = TotalItems.ToString();                }
             }
             catch (Exception ex)
             {
@@ -87,6 +88,11 @@ namespace PSPKerrdige
                 MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -9,8 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/ItemSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/ItemSort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/ItemSwap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/ItemSwap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
     &quot;.NET Project.PSPKerrdige.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SimonDev2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -139,6 +139,8 @@
       <workItem from="1739792744660" duration="1561000" />
       <workItem from="1739870361923" duration="2613000" />
       <workItem from="1739957874982" duration="955000" />
+      <workItem from="1742227869779" duration="1119000" />
+      <workItem from="1742485558377" duration="824000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
