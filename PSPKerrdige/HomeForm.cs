@@ -1,9 +1,15 @@
-using System.Security.Cryptography.X509Certificates;
+using System;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace PSPKerrdige
 {
     public partial class HomeForm : Form
     {
+        // Class-level variable to hold the sorted lorries.
+        private ItemSort currentItemSort;
+
         public HomeForm()
         {
             InitializeComponent();
@@ -17,11 +23,11 @@ namespace PSPKerrdige
 
         private void btn_ExitProgram_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         public void getData(string filePath)
-        { 
+        {
             txb_FilePath.Text = filePath;
         }
 
@@ -37,10 +43,10 @@ namespace PSPKerrdige
                 }
                 else
                 {
-                    // Create an instance of the ItemSort class and pass the items to the constructor
+                    // Create an instance of the ItemSort class and pass the items.
                     ItemSort itemSort = new ItemSort { Items = items };
 
-                    //default values for the lorry maximum weight and volume (in CM^3)
+                    // Default values for the lorry maximum weight and volume (in CM³)
                     float weight = 10000f;
                     float volume = 109760000f;
 
@@ -51,10 +57,16 @@ namespace PSPKerrdige
                     int iterations = 500000;
                     float finalFitnessValue = itemSwap.HillClimbing(iterations);
 
+                    // Set the currentItemSort to the sorted items.
+                    currentItemSort = itemSort;
+                    // Enable the Select Lorry button and the Save File button.
+                    btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
+                    
                     txb_Solution.Text = itemSort.DisplayResults();
-                    lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries(); 
-                    lbl_TotalItems.Text = TotalItems.ToString();                }
+                    lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
+                    lbl_TotalItems.Text = TotalItems.ToString();
+                }
             }
             catch (Exception ex)
             {
@@ -64,18 +76,15 @@ namespace PSPKerrdige
 
         private void btn_FileSave_Click(object sender, EventArgs e)
         {
-            //creates an instance of the FolderBrowserDialog class and sets the initial directory to C drive
+            // Create an instance of the FolderBrowserDialog class and set the initial directory to C:\
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
             folderBrowserDialog.InitialDirectory = "c:\\";
-            //opens the users folder browser
             folderBrowserDialog.ShowNewFolderButton = true;
             DialogResult result = folderBrowserDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                //saves the location of the folder selected by the user 
                 string folderPath = folderBrowserDialog.SelectedPath;
                 string fileName = "solution.txt";
-                //creates an instance of the FileStream class and writes the solution to the file selected by user
                 FileStream outputSolution = new FileStream(folderPath + "\\" + fileName, FileMode.Create);
                 StreamWriter writer = new StreamWriter(outputSolution);
                 writer.Write(txb_Solution.Text);
@@ -87,12 +96,27 @@ namespace PSPKerrdige
             {
                 MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+        }
+
+        // Event handler for the "Select Lorry" button.
+        private void btn_SelectLorry_Click(object sender, EventArgs e)
+        {
+            if (currentItemSort != null && currentItemSort.Lorries.Any())
+            {
+                // Create and show the SelectLorry form, passing the sorted lorries.
+                SelectLorry selectLorryForm = new SelectLorry(currentItemSort.Lorries);
+                selectLorryForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please calculate loads first.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
+

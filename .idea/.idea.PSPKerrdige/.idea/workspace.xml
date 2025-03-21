@@ -7,8 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
+    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="Added Total Number Of Items">
+      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryForm.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
     </list>
@@ -23,6 +27,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Lordsj1234 &lt;simonlaujones@outlook.com&gt;" />
         <option value="AdamBrown04 &lt;adambrown2004@outlook.com&gt;" />
       </list>
     </option>
@@ -48,8 +53,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="SimonDev2" />
-                    <option name="lastUsedInstant" value="1739958338" />
+                    <option name="branchName" value="SimonSprint2" />
+                    <option name="lastUsedInstant" value="1742486900" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -74,10 +79,10 @@
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Data/datafile.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -141,6 +146,7 @@
       <workItem from="1739957874982" duration="955000" />
       <workItem from="1742227869779" duration="1119000" />
       <workItem from="1742485558377" duration="824000" />
+      <workItem from="1742566287614" duration="2593000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
@@ -174,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739870698061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Total Number Of Items">
+      <option name="closed" value="true" />
+      <created>1742486576822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742486576822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +226,8 @@
     <MESSAGE value="Update README with new feature instructions" />
     <MESSAGE value="Add DisplayResults method, update SortItemsTest UI, and initialize components" />
     <MESSAGE value="Remove unnecessary whitespace and newline at the end of Project file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary whitespace and newline at the end of Project file" />
+    <MESSAGE value="Merge pull request #20 from AdamBrown04/dev-branch&#10;&#10;see dimensions left" />
+    <MESSAGE value="Added Total Number Of Items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Total Number Of Items" />
   </component>
 </project>
