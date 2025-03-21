@@ -13,6 +13,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +79,10 @@
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Data/datafile.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerrdige/ Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -100,7 +102,7 @@
     &quot;.NET Project.PSPKerrdige.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SimonSprint2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -143,7 +145,7 @@
       <workItem from="1739870361923" duration="2613000" />
       <workItem from="1739957874982" duration="955000" />
       <workItem from="1742227869779" duration="1119000" />
-      <workItem from="1742485558377" duration="1987000" />
+      <workItem from="1742485558377" duration="824000" />
       <workItem from="1742566287614" duration="2593000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">

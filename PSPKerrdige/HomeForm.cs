@@ -56,16 +56,13 @@ namespace PSPKerrdige
                     
                     int iterations = 500000;
                     float finalFitnessValue = itemSwap.HillClimbing(iterations);
-                    
-                    
 
-                    // Set the currentItemSort to the sorted items
+                    // Set the currentItemSort to the sorted items.
                     currentItemSort = itemSort;
-                    // Enable the Select Lorry button and the Save File button
-
+                    // Enable the Select Lorry button and the Save File button.
                     btn_SelectLorry.Enabled = true;
-                    
                     btn_FileSave.Enabled = true;
+                    
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();
@@ -101,11 +98,6 @@ namespace PSPKerrdige
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         // Event handler for the "Select Lorry" button.
         private void btn_SelectLorry_Click(object sender, EventArgs e)
         {
@@ -120,5 +112,11 @@ namespace PSPKerrdige
                 MessageBox.Show("Please calculate loads first.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
+
