@@ -11,6 +11,10 @@
 
         private float CurrentWeight = 0; 
         private float CurrentVolume = 0; 
+        
+        // Extra space between items as 5% of the volume
+
+        public float SpaceBetween { get; set; } = 1.05f;
 
         // Constructor
         public Lorry(float capacity, float lorry_ID, float weightCapacity, float volumeCapacity)
@@ -32,33 +36,35 @@
         
         public bool MoveItem(Item item)
         {
-            // Check if the item fits in weight and volume
-            if (RemainingCapacity() >= item.Weight && RemainingVolume() >= item.Volume)
+            // Check if the item fits considering weight and effective volume (including extra space).
+            if (RemainingCapacity() >= item.Weight && RemainingVolume() >= item.Volume * SpaceBetween)
             {
                 LoadedItems.Add(item);
                 CurrentWeight += item.Weight;
-                CurrentVolume += item.Volume; 
+                CurrentVolume += item.Volume * SpaceBetween; 
                 return true;
             }
             return false;
         }
 
-        // Remove an item from the lorry and update totals
+        // Remove an item and update totals accordingly.
         public void RemoveItem(Item item)
         {
             if (LoadedItems.Remove(item))
             {
                 CurrentWeight -= item.Weight;
-                CurrentVolume -= item.Volume; 
+                CurrentVolume -= item.Volume * SpaceBetween; 
             }
         }
-
+//
         public string DisplayResults()
         {
-            // Display the results of the items inside each lorry
             if (LoadedItems.Count > 0)
             {
-                return "Lorry " + Lorry_ID + ": \n Weight remaining: " + RemainingCapacity() + "KG\n Volume remaining: "+RemainingVolume() + "CM^3\n Items: \n"+ string.Join(", ", LoadedItems.Select(item => item.Count_ID));
+                return "Lorry " + Lorry_ID + ": \n" +
+                       "Weight remaining: " + RemainingCapacity() + " KG\n" +
+                       "Volume remaining: " + RemainingVolume() + " CM³\n" +
+                       "Items: \n" + string.Join(", ", LoadedItems.Select(item => item.Count_ID));
             }
             else
             {

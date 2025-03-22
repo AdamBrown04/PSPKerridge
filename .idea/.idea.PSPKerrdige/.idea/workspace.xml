@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.cs" afterDir="false" />
+    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="Fixed the Select Lorry stuff">
+      <changelist_data name="Lordsj1234" email="simonlaujones@outlook.com" automatic="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Lordsj1234 &lt;simonlaujones@outlook.com&gt;" />
         <option value="AdamBrown04 &lt;adambrown2004@outlook.com&gt;" />
       </list>
     </option>
@@ -184,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739870698061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed the Select Lorry stuff">
+      <option name="closed" value="true" />
+      <created>1742665325419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742665325419</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +227,7 @@
     <MESSAGE value="Update README with new feature instructions" />
     <MESSAGE value="Add DisplayResults method, update SortItemsTest UI, and initialize components" />
     <MESSAGE value="Remove unnecessary whitespace and newline at the end of Project file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary whitespace and newline at the end of Project file" />
+    <MESSAGE value="Fixed the Select Lorry stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the Select Lorry stuff" />
   </component>
 </project>
