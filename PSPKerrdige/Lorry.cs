@@ -56,7 +56,7 @@
                 CurrentVolume -= item.Volume * SpaceBetween; 
             }
         }
-
+//
         public string DisplayResults()
         {
             if (LoadedItems.Count > 0)
