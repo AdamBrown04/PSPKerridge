@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace PSPKerrdige
 {
@@ -31,7 +32,7 @@ namespace PSPKerrdige
             txb_FilePath.Text = filePath;
         }
 
-        private void btn_CalculateLoads_Click(object sender, EventArgs e)
+        private async void btn_CalculateLoads_Click(object sender, EventArgs e)
         {
             try
             {
@@ -52,10 +53,14 @@ namespace PSPKerrdige
 
                     itemSort.Sort(weight, volume);
 
+                    // Create the ItemSwap instance
                     ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
                     int iterations = 500000;
-                    float finalFitnessValue = itemSwap.HillClimbing(iterations);
-                    // Sort items in each lorry by weight 
+
+                    // Offload the hill climbing optimization to a background thread
+                    float finalFitnessValue = await Task.Run(() => itemSwap.HillClimbing(iterations));
+
+                    // Optionally sort the loaded items in each lorry by weight
                     foreach (var lorry in itemSwap.Lorries)
                     {
                         lorry.LoadedItems = lorry.LoadedItems.OrderByDescending(item => item.Weight).ToList();
@@ -64,10 +69,11 @@ namespace PSPKerrdige
                     // Store the sorted lorries for later use.
                     currentItemSort = itemSort;
 
-                    // Enable the "Select Lorry" button (and Save button) once optimal load is calculated.
+                    // Enable the "Select Lorry" and "Save" buttons once optimization is done.
                     btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
 
+                    // Update the UI with the results (ensure this runs on the UI thread)
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();
