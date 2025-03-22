@@ -55,6 +55,11 @@ namespace PSPKerrdige
                     ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
                     int iterations = 500000;
                     float finalFitnessValue = itemSwap.HillClimbing(iterations);
+                    // Sort items in each lorry by weight 
+                    foreach (var lorry in itemSwap.Lorries)
+                    {
+                        lorry.LoadedItems = lorry.LoadedItems.OrderByDescending(item => item.Weight).ToList();
+                    }
 
                     // Store the sorted lorries for later use.
                     currentItemSort = itemSort;
@@ -70,7 +75,8 @@ namespace PSPKerrdige
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -89,11 +95,13 @@ namespace PSPKerrdige
                 writer.Write(txb_Solution.Text);
                 writer.Close();
                 outputSolution.Close();
-                MessageBox.Show("Solution saved to solution.txt", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Solution saved to solution.txt", "Success", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to save solution to solution.txt", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -106,7 +114,8 @@ namespace PSPKerrdige
             }
             else
             {
-                MessageBox.Show("Please calculate loads first.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please calculate loads first.", "Info", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
 

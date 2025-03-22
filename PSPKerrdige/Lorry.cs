@@ -9,9 +9,9 @@
 
         public List<Item> LoadedItems { get; set; } = new List<Item>();
 
-        private float CurrentWeight = 0; 
-        private float CurrentVolume = 0; 
-        
+        private float CurrentWeight = 0;
+        private float CurrentVolume = 0;
+
         // Extra space between items as 5% of the volume
 
         public float SpaceBetween { get; set; } = 1.05f;
@@ -31,9 +31,9 @@
 
         public float RemainingVolume()
         {
-            return VolumeCapacity - CurrentVolume; 
+            return VolumeCapacity - CurrentVolume;
         }
-        
+
         public bool MoveItem(Item item)
         {
             // Check if the item fits considering weight and effective volume (including extra space).
@@ -41,9 +41,10 @@
             {
                 LoadedItems.Add(item);
                 CurrentWeight += item.Weight;
-                CurrentVolume += item.Volume * SpaceBetween; 
+                CurrentVolume += item.Volume * SpaceBetween;
                 return true;
             }
+
             return false;
         }
 
@@ -53,17 +54,20 @@
             if (LoadedItems.Remove(item))
             {
                 CurrentWeight -= item.Weight;
-                CurrentVolume -= item.Volume * SpaceBetween; 
+                CurrentVolume -= item.Volume * SpaceBetween;
             }
         }
 
+//
         public string DisplayResults()
         {
             if (LoadedItems.Count > 0)
             {
+                float VolumeMeters = RemainingVolume() / 1000000f;
+
                 return "Lorry " + Lorry_ID + ": \n" +
                        "Weight remaining: " + RemainingCapacity() + " KG\n" +
-                       "Volume remaining: " + RemainingVolume() + " CM³\n" +
+                       "Volume remaining: " + VolumeMeters.ToString("F5") + " M³\n" +
                        "Items: \n" + string.Join(", ", LoadedItems.Select(item => item.Count_ID));
             }
             else
