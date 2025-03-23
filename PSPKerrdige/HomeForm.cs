@@ -44,36 +44,40 @@ namespace PSPKerrdige
                 }
                 else
                 {
-                    // Create an instance of the ItemSort class and pass the items.
                     ItemSort itemSort = new ItemSort { Items = items };
 
-                    // Default values for lorry maximum weight and volume (in CM³)
                     float weight = 10000f;
                     float volume = 109760000f;
-
                     itemSort.Sort(weight, volume);
 
-                    // Create the ItemSwap instance
                     ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
                     int iterations = 500000;
 
-                    // Offload the hill climbing optimization to a background thread
-                    float finalFitnessValue = await Task.Run(() => itemSwap.HillClimbing(iterations));
+                    // Create a progress object to update the UI with the current progress
+                    Progress<int> progress = new Progress<int>(percent =>
+                    {
+                        if (percent >= 99)
+                        {
+                            lbl_Progress.Text = "NA";
+                        }
+                        else
+                        {
+                            lbl_Progress.Text = percent.ToString() + "%";
+                        }
+                    });
 
-                    // Optionally sort the loaded items in each lorry by weight
+                    // Offload the hill climbing optimization to a background thread.
+                    float finalFitnessValue = await Task.Run(() => itemSwap.HillClimbing(iterations, progress));
+
+                    // Optionally sort the loaded items in each lorry by weight.
                     foreach (var lorry in itemSwap.Lorries)
                     {
                         lorry.LoadedItems = lorry.LoadedItems.OrderByDescending(item => item.Weight).ToList();
                     }
 
-                    // Store the sorted lorries for later use.
                     currentItemSort = itemSort;
-
-                    // Enable the "Select Lorry" and "Save" buttons once optimization is done.
                     btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
-
-                    // Update the UI with the results (ensure this runs on the UI thread)
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();
@@ -128,6 +132,11 @@ namespace PSPKerrdige
         private void label1_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void lbl_Progress_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

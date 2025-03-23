@@ -36,170 +36,197 @@
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            this.btn_FileSelect = new System.Windows.Forms.Button();
-            this.btn_FileSave = new System.Windows.Forms.Button();
-            this.btn_ExitProgram = new System.Windows.Forms.Button();
-            this.btn_CalculateLoads = new System.Windows.Forms.Button();
-            this.btn_SelectLorry = new System.Windows.Forms.Button();
-            this.lbl_FileSelected = new System.Windows.Forms.Label();
-            this.txb_FilePath = new System.Windows.Forms.TextBox();
-            this.txb_Solution = new System.Windows.Forms.RichTextBox();
-            this.lbl_Solution = new System.Windows.Forms.Label();
-            this.lbl_NumOfLorries = new System.Windows.Forms.Label();
-            this.lbl_TotalItems = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            btn_FileSelect = new System.Windows.Forms.Button();
+            btn_FileSave = new System.Windows.Forms.Button();
+            btn_ExitProgram = new System.Windows.Forms.Button();
+            btn_CalculateLoads = new System.Windows.Forms.Button();
+            btn_SelectLorry = new System.Windows.Forms.Button();
+            lbl_FileSelected = new System.Windows.Forms.Label();
+            txb_FilePath = new System.Windows.Forms.TextBox();
+            txb_Solution = new System.Windows.Forms.RichTextBox();
+            lbl_Solution = new System.Windows.Forms.Label();
+            lbl_NumOfLorries = new System.Windows.Forms.Label();
+            lbl_TotalItems = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            lbl_ProgessLabel = new System.Windows.Forms.Label();
+            lbl_Progress = new System.Windows.Forms.Label();
+            SuspendLayout();
             // 
             // btn_FileSelect
             // 
-            this.btn_FileSelect.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_FileSelect.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_FileSelect.Location = new System.Drawing.Point(632, 45);
-            this.btn_FileSelect.Name = "btn_FileSelect";
-            this.btn_FileSelect.Size = new System.Drawing.Size(353, 70);
-            this.btn_FileSelect.TabIndex = 0;
-            this.btn_FileSelect.Text = "Select File";
-            this.btn_FileSelect.UseVisualStyleBackColor = false;
-            this.btn_FileSelect.Click += new System.EventHandler(this.btn_FileSelect_Click);
+            btn_FileSelect.BackColor = System.Drawing.SystemColors.Info;
+            btn_FileSelect.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            btn_FileSelect.Location = new System.Drawing.Point(632, 45);
+            btn_FileSelect.Name = "btn_FileSelect";
+            btn_FileSelect.Size = new System.Drawing.Size(353, 70);
+            btn_FileSelect.TabIndex = 0;
+            btn_FileSelect.Text = "Select File";
+            btn_FileSelect.UseVisualStyleBackColor = false;
+            btn_FileSelect.Click += btn_FileSelect_Click;
             // 
             // btn_FileSave
             // 
-            this.btn_FileSave.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_FileSave.Enabled = false;
-            this.btn_FileSave.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_FileSave.Location = new System.Drawing.Point(632, 121);
-            this.btn_FileSave.Name = "btn_FileSave";
-            this.btn_FileSave.Size = new System.Drawing.Size(353, 70);
-            this.btn_FileSave.TabIndex = 1;
-            this.btn_FileSave.Text = "Save Output to File";
-            this.btn_FileSave.UseVisualStyleBackColor = false;
-            this.btn_FileSave.Click += new System.EventHandler(this.btn_FileSave_Click);
-            // 
-            // btn_SelectLorry
-            // 
-            this.btn_SelectLorry.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_SelectLorry.Enabled = false;
-            this.btn_SelectLorry.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_SelectLorry.Location = new System.Drawing.Point(632, 197);
-            this.btn_SelectLorry.Name = "btn_SelectLorry";
-            this.btn_SelectLorry.Size = new System.Drawing.Size(353, 70);
-            this.btn_SelectLorry.TabIndex = 2;
-            this.btn_SelectLorry.Text = "Select Lorry";
-            this.btn_SelectLorry.UseVisualStyleBackColor = false;
-            this.btn_SelectLorry.Click += new System.EventHandler(this.btn_SelectLorry_Click);
-            // 
-            // btn_CalculateLoads
-            // 
-            this.btn_CalculateLoads.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_CalculateLoads.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_CalculateLoads.Location = new System.Drawing.Point(632, 430);
-            this.btn_CalculateLoads.Name = "btn_CalculateLoads";
-            this.btn_CalculateLoads.Size = new System.Drawing.Size(353, 70);
-            this.btn_CalculateLoads.TabIndex = 3;
-            this.btn_CalculateLoads.Text = "Calculate Optimum Loading Method";
-            this.btn_CalculateLoads.UseVisualStyleBackColor = false;
-            this.btn_CalculateLoads.Click += new System.EventHandler(this.btn_CalculateLoads_Click);
+            btn_FileSave.BackColor = System.Drawing.SystemColors.Info;
+            btn_FileSave.Enabled = false;
+            btn_FileSave.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            btn_FileSave.Location = new System.Drawing.Point(632, 121);
+            btn_FileSave.Name = "btn_FileSave";
+            btn_FileSave.Size = new System.Drawing.Size(353, 70);
+            btn_FileSave.TabIndex = 1;
+            btn_FileSave.Text = "Save Output to File";
+            btn_FileSave.UseVisualStyleBackColor = false;
+            btn_FileSave.Click += btn_FileSave_Click;
             // 
             // btn_ExitProgram
             // 
-            this.btn_ExitProgram.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_ExitProgram.Location = new System.Drawing.Point(632, 506);
-            this.btn_ExitProgram.Name = "btn_ExitProgram";
-            this.btn_ExitProgram.Size = new System.Drawing.Size(353, 70);
-            this.btn_ExitProgram.TabIndex = 4;
-            this.btn_ExitProgram.Text = "Exit Program";
-            this.btn_ExitProgram.UseVisualStyleBackColor = false;
-            this.btn_ExitProgram.Click += new System.EventHandler(this.btn_ExitProgram_Click);
+            btn_ExitProgram.BackColor = System.Drawing.SystemColors.Info;
+            btn_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            btn_ExitProgram.Location = new System.Drawing.Point(632, 506);
+            btn_ExitProgram.Name = "btn_ExitProgram";
+            btn_ExitProgram.Size = new System.Drawing.Size(353, 70);
+            btn_ExitProgram.TabIndex = 4;
+            btn_ExitProgram.Text = "Exit Program";
+            btn_ExitProgram.UseVisualStyleBackColor = false;
+            btn_ExitProgram.Click += btn_ExitProgram_Click;
+            // 
+            // btn_CalculateLoads
+            // 
+            btn_CalculateLoads.BackColor = System.Drawing.SystemColors.Info;
+            btn_CalculateLoads.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            btn_CalculateLoads.Location = new System.Drawing.Point(632, 430);
+            btn_CalculateLoads.Name = "btn_CalculateLoads";
+            btn_CalculateLoads.Size = new System.Drawing.Size(353, 70);
+            btn_CalculateLoads.TabIndex = 3;
+            btn_CalculateLoads.Text = "Calculate Optimum Loading Method";
+            btn_CalculateLoads.UseVisualStyleBackColor = false;
+            btn_CalculateLoads.Click += btn_CalculateLoads_Click;
+            // 
+            // btn_SelectLorry
+            // 
+            btn_SelectLorry.BackColor = System.Drawing.SystemColors.Info;
+            btn_SelectLorry.Enabled = false;
+            btn_SelectLorry.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            btn_SelectLorry.Location = new System.Drawing.Point(632, 197);
+            btn_SelectLorry.Name = "btn_SelectLorry";
+            btn_SelectLorry.Size = new System.Drawing.Size(353, 70);
+            btn_SelectLorry.TabIndex = 2;
+            btn_SelectLorry.Text = "Select Lorry";
+            btn_SelectLorry.UseVisualStyleBackColor = false;
+            btn_SelectLorry.Click += btn_SelectLorry_Click;
             // 
             // lbl_FileSelected
             // 
-            this.lbl_FileSelected.AutoSize = true;
-            this.lbl_FileSelected.Location = new System.Drawing.Point(632, 15);
-            this.lbl_FileSelected.Name = "lbl_FileSelected";
-            this.lbl_FileSelected.Size = new System.Drawing.Size(96, 20);
-            this.lbl_FileSelected.TabIndex = 5;
-            this.lbl_FileSelected.Text = "File Selected:";
+            lbl_FileSelected.AutoSize = true;
+            lbl_FileSelected.Location = new System.Drawing.Point(632, 15);
+            lbl_FileSelected.Name = "lbl_FileSelected";
+            lbl_FileSelected.Size = new System.Drawing.Size(96, 20);
+            lbl_FileSelected.TabIndex = 5;
+            lbl_FileSelected.Text = "File Selected:";
             // 
             // txb_FilePath
             // 
-            this.txb_FilePath.Enabled = false;
-            this.txb_FilePath.Location = new System.Drawing.Point(734, 12);
-            this.txb_FilePath.Name = "txb_FilePath";
-            this.txb_FilePath.ReadOnly = true;
-            this.txb_FilePath.Size = new System.Drawing.Size(251, 27);
-            this.txb_FilePath.TabIndex = 6;
+            txb_FilePath.Enabled = false;
+            txb_FilePath.Location = new System.Drawing.Point(734, 12);
+            txb_FilePath.Name = "txb_FilePath";
+            txb_FilePath.ReadOnly = true;
+            txb_FilePath.Size = new System.Drawing.Size(251, 27);
+            txb_FilePath.TabIndex = 6;
             // 
             // txb_Solution
             // 
-            this.txb_Solution.Location = new System.Drawing.Point(12, 12);
-            this.txb_Solution.Name = "txb_Solution";
-            this.txb_Solution.ReadOnly = true;
-            this.txb_Solution.Size = new System.Drawing.Size(614, 522);
-            this.txb_Solution.TabIndex = 7;
-            this.txb_Solution.Text = "";
+            txb_Solution.Location = new System.Drawing.Point(12, 12);
+            txb_Solution.Name = "txb_Solution";
+            txb_Solution.ReadOnly = true;
+            txb_Solution.Size = new System.Drawing.Size(614, 522);
+            txb_Solution.TabIndex = 7;
+            txb_Solution.Text = "";
             // 
             // lbl_Solution
             // 
-            this.lbl_Solution.AutoSize = true;
-            this.lbl_Solution.Location = new System.Drawing.Point(12, 552);
-            this.lbl_Solution.Name = "lbl_Solution";
-            this.lbl_Solution.Size = new System.Drawing.Size(168, 20);
-            this.lbl_Solution.TabIndex = 8;
-            this.lbl_Solution.Text = "Total Amount of Lorries:";
+            lbl_Solution.AutoSize = true;
+            lbl_Solution.Location = new System.Drawing.Point(12, 552);
+            lbl_Solution.Name = "lbl_Solution";
+            lbl_Solution.Size = new System.Drawing.Size(168, 20);
+            lbl_Solution.TabIndex = 8;
+            lbl_Solution.Text = "Total Amount of Lorries:";
             // 
             // lbl_NumOfLorries
             // 
-            this.lbl_NumOfLorries.AutoSize = true;
-            this.lbl_NumOfLorries.Location = new System.Drawing.Point(186, 552);
-            this.lbl_NumOfLorries.Name = "lbl_NumOfLorries";
-            this.lbl_NumOfLorries.Size = new System.Drawing.Size(30, 20);
-            this.lbl_NumOfLorries.TabIndex = 9;
-            this.lbl_NumOfLorries.Text = "NA";
+            lbl_NumOfLorries.AutoSize = true;
+            lbl_NumOfLorries.Location = new System.Drawing.Point(186, 552);
+            lbl_NumOfLorries.Name = "lbl_NumOfLorries";
+            lbl_NumOfLorries.Size = new System.Drawing.Size(30, 20);
+            lbl_NumOfLorries.TabIndex = 9;
+            lbl_NumOfLorries.Text = "NA";
             // 
             // lbl_TotalItems
             // 
-            this.lbl_TotalItems.Location = new System.Drawing.Point(347, 552);
-            this.lbl_TotalItems.Name = "lbl_TotalItems";
-            this.lbl_TotalItems.Size = new System.Drawing.Size(100, 23);
-            this.lbl_TotalItems.TabIndex = 10;
-            this.lbl_TotalItems.Text = "NA";
+            lbl_TotalItems.Location = new System.Drawing.Point(347, 552);
+            lbl_TotalItems.Name = "lbl_TotalItems";
+            lbl_TotalItems.Size = new System.Drawing.Size(100, 23);
+            lbl_TotalItems.TabIndex = 10;
+            lbl_TotalItems.Text = "NA";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(241, 552);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Total Items: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.Location = new System.Drawing.Point(241, 552);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(100, 23);
+            label1.TabIndex = 11;
+            label1.Text = "Total Items: ";
+            label1.Click += label1_Click;
+            // 
+            // lbl_ProgessLabel
+            // 
+            lbl_ProgessLabel.Location = new System.Drawing.Point(420, 552);
+            lbl_ProgessLabel.Name = "lbl_ProgessLabel";
+            lbl_ProgessLabel.Size = new System.Drawing.Size(84, 22);
+            lbl_ProgessLabel.TabIndex = 12;
+            lbl_ProgessLabel.Text = "Progess:";
+            // 
+            // lbl_Progress
+            // 
+            lbl_Progress.Location = new System.Drawing.Point(482, 552);
+            lbl_Progress.Name = "lbl_Progress";
+            lbl_Progress.Size = new System.Drawing.Size(84, 22);
+            lbl_Progress.TabIndex = 13;
+            lbl_Progress.Text = "NA";
+            lbl_Progress.Click += lbl_Progress_Click;
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(992, 581);
-            this.Controls.Add(this.btn_SelectLorry);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_TotalItems);
-            this.Controls.Add(this.lbl_NumOfLorries);
-            this.Controls.Add(this.lbl_Solution);
-            this.Controls.Add(this.txb_Solution);
-            this.Controls.Add(this.txb_FilePath);
-            this.Controls.Add(this.lbl_FileSelected);
-            this.Controls.Add(this.btn_CalculateLoads);
-            this.Controls.Add(this.btn_ExitProgram);
-            this.Controls.Add(this.btn_FileSave);
-            this.Controls.Add(this.btn_FileSelect);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "HomeForm";
-            this.Text = "Home";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.ControlLight;
+            ClientSize = new System.Drawing.Size(992, 581);
+            Controls.Add(lbl_Progress);
+            Controls.Add(lbl_ProgessLabel);
+            Controls.Add(btn_SelectLorry);
+            Controls.Add(label1);
+            Controls.Add(lbl_TotalItems);
+            Controls.Add(lbl_NumOfLorries);
+            Controls.Add(lbl_Solution);
+            Controls.Add(txb_Solution);
+            Controls.Add(txb_FilePath);
+            Controls.Add(lbl_FileSelected);
+            Controls.Add(btn_CalculateLoads);
+            Controls.Add(btn_ExitProgram);
+            Controls.Add(btn_FileSave);
+            Controls.Add(btn_FileSelect);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Text = "Home";
+            ResumeLayout(false);
+            PerformLayout();
         }
+
+        private System.Windows.Forms.Label lbl_ProgessLabel;
+        private System.Windows.Forms.Label lbl_Progress;
 
         #endregion
 
