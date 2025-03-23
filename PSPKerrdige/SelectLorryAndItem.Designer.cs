@@ -1,6 +1,6 @@
 namespace PSPKerrdige
 {
-    partial class SelectLorry
+    partial class SelectLorryAndItem
     {
         /// <summary>
         /// Required designer variable.
@@ -109,7 +109,7 @@ namespace PSPKerrdige
             btn_ShowItem.UseVisualStyleBackColor = false;
             btn_ShowItem.Click += btn_ShowItem_Click;
             // 
-            // SelectLorry
+            // SelectLorryAndItem
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

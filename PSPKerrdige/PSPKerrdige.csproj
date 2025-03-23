@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="SelectLorry.cs">
+      <Compile Update="SelectLorryAndItem.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace PSPKerrdige
 {
-    public partial class SelectLorry : Form
+    public partial class SelectLorryAndItem : Form
     {
         private List<Lorry> SortedLorrys;
 
-        public SelectLorry(List<Lorry> sortedLorrys)
+        public SelectLorryAndItem(List<Lorry> sortedLorrys)
         {
             InitializeComponent();
             this.SortedLorrys = sortedLorrys;
