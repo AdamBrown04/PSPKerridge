@@ -5,9 +5,11 @@ public class ItemSwap
     // Create a list of items and lorries and a stack to store moves
     public List<Lorry> Lorries { get; set; } = new List<Lorry>();
     public List<Item> Items { get; set; } = new List<Item>();
+
     private Stack<(Item Item, Lorry SourceLorry, Lorry DestinationLorry)> MoveStack = new Stack<(Item, Lorry, Lorry)>();
+
     // Create a random object to select random items and lorries
-    private Random Random = new Random(); 
+    private Random Random = new Random();
 
     public float FitnessFunction()
     {
@@ -28,8 +30,7 @@ public class ItemSwap
         do
         {
             DestinationLorry = Lorries[Random.Next(Lorries.Count)];
-        }
-        while (DestinationLorry == SourceLorry);
+        } while (DestinationLorry == SourceLorry);
 
         // Move the item from the source lorry to the destination lorry
         if (DestinationLorry.MoveItem(SelectedItem))
@@ -39,6 +40,7 @@ public class ItemSwap
             MoveStack.Push((SelectedItem, SourceLorry, DestinationLorry));
         }
     }
+
     public void Backtrack()
     {
         // If there are moves in the stack pop the last move and undo it
@@ -49,26 +51,31 @@ public class ItemSwap
             sourceLorry.MoveItem(item);
         }
     }
-    public float HillClimbing(int Iterations)
+
+    public float HillClimbing(int Iterations, IProgress<int> ProgessPercent = null)
     {
-        // Run the hill climbing algorithm for the number of iterations set
         float TotalFitnessValue = FitnessFunction();
         for (int i = 0; i < Iterations; i++)
         {
-            // Move a selected item and check if the fitness value has improved
+            // Perform a single optimization move.
             MoveSelectedItem();
             float NewFitnessValue = FitnessFunction();
-            // If the fitness value has not improved backtrack
+
             if (NewFitnessValue < TotalFitnessValue)
             {
                 Backtrack();
             }
             else
             {
-                // If the fitness value has improved set the new fitness value as the total fitness value
                 TotalFitnessValue = NewFitnessValue;
             }
+
+            if (ProgessPercent != null && i % 100 == 0)
+            {
+                ProgessPercent.Report((i * 100) / Iterations);
+            }
         }
+
         return TotalFitnessValue;
     }
 }
