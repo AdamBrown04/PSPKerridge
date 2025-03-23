@@ -1,6 +1,4 @@
 using System;
-using System.IO;
-using System.Text.Json;
 using System.Windows.Forms;
 
 namespace PSPKerrdige
@@ -14,20 +12,6 @@ namespace PSPKerrdige
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            
-            try
-            {
-                //Copy Data file to the debug folder if erroring
-                var items = LoadFile.LoadItemsFromJson("Data/datafile.json");
-                if (items == null)
-                {
-                    throw new Exception("Deserialized items are null.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to load JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             Application.Run(new HomeForm());
         }
     }

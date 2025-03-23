@@ -9,8 +9,11 @@
 
         public List<Item> LoadedItems { get; set; } = new List<Item>();
 
-        private float CurrentWeight = 0; 
-        private float CurrentVolume = 0; 
+        private float CurrentWeight = 0;
+        private float CurrentVolume = 0;
+
+        // Extra space between items as 5% of the volume
+        public float SpaceBetween { get; set; } = 1.05f;
 
         // Constructor
         public Lorry(float capacity, float lorry_ID, float weightCapacity, float volumeCapacity)
@@ -27,38 +30,46 @@
 
         public float RemainingVolume()
         {
-            return VolumeCapacity - CurrentVolume; 
+            return VolumeCapacity - CurrentVolume;
         }
-        
+
         public bool MoveItem(Item item)
         {
-            // Check if the item fits in weight and volume
-            if (RemainingCapacity() >= item.Weight && RemainingVolume() >= item.Volume)
+            // Check if the item fits considering weight and effective volume (including extra space).
+            if (RemainingCapacity() >= item.Weight && RemainingVolume() >= item.Volume * SpaceBetween)
             {
                 LoadedItems.Add(item);
                 CurrentWeight += item.Weight;
-                CurrentVolume += item.Volume; 
+                CurrentVolume += item.Volume * SpaceBetween;
                 return true;
             }
+
             return false;
         }
 
-        // Remove an item from the lorry and update totals
+        // Remove an item and update totals accordingly.
         public void RemoveItem(Item item)
         {
             if (LoadedItems.Remove(item))
             {
                 CurrentWeight -= item.Weight;
-                CurrentVolume -= item.Volume; 
+                CurrentVolume -= item.Volume * SpaceBetween;
             }
         }
 
         public string DisplayResults()
         {
-            // Display the results of the items inside each lorry
             if (LoadedItems.Count > 0)
             {
-                return "Lorry " + Lorry_ID + ": \n Weight remaining: " + RemainingCapacity() + "KG\n Volume remaining: "+RemainingVolume() + "CM^3\n Items: \n"+ string.Join(", ", LoadedItems.Select(item => item.Count_ID));
+                float UsedWeight = CurrentWeight;
+                float RemainingWeight = RemainingCapacity();
+                float UsedVolume = CurrentVolume / 1000000f; // Convert to M cubedd
+                float RemainingVolumeMeters = RemainingVolume() / 1000000f;
+                return "Lorry " + Lorry_ID + ": \n" + "Weight used: " + UsedWeight + " KG\n" + "Weight remaining: " +
+                       RemainingWeight + " KG\n" + "Volume used: " + UsedVolume.ToString("F5") + " M³\n" +
+                       "Volume remaining: " + RemainingVolumeMeters.ToString("F5") + " M³\n" + "Total items: " +
+                       LoadedItems.Count + "\n" + "Items: \n" +
+                       string.Join(", ", LoadedItems.Select(item => item.Count_ID));
             }
             else
             {

@@ -9,8 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/ItemSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/ItemSort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/ItemSwap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/ItemSwap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Lordsj1234 &lt;simonlaujones@outlook.com&gt;" />
         <option value="AdamBrown04 &lt;adambrown2004@outlook.com&gt;" />
       </list>
     </option>
@@ -48,12 +50,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="SimonDev2" />
-                    <option name="lastUsedInstant" value="1739958338" />
+                    <option name="branchName" value="SelectItems" />
+                    <option name="lastUsedInstant" value="1742758643" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1739784932" />
+                    <option name="lastUsedInstant" value="1742758376" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="SelectLorryFix" />
+                    <option name="lastUsedInstant" value="1742663946" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="SimonSprint2" />
+                    <option name="lastUsedInstant" value="1742663663" />
                   </RecentBranch>
                 </list>
               </option>
@@ -68,18 +78,26 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AdamBrown04/PSPKerridge.git&quot;,
     &quot;accountId&quot;: &quot;5edacee1-c73a-4479-80c1-6d109db08965&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;AdamBrown04&quot;,
+    &quot;repository&quot;: &quot;PSPKerridge&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Data/datafile.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Lorry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Lorry.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -92,21 +110,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.PSPKerrdige.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SimonDev2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.codegpt&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.PSPKerrdige.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "SelectItems",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="PSPKerrdige" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -139,6 +157,12 @@
       <workItem from="1739792744660" duration="1561000" />
       <workItem from="1739870361923" duration="2613000" />
       <workItem from="1739957874982" duration="955000" />
+      <workItem from="1742227869779" duration="1119000" />
+      <workItem from="1742485558377" duration="824000" />
+      <workItem from="1742683318364" duration="5583000" />
+      <workItem from="1742757212611" duration="112000" />
+      <workItem from="1742757464419" duration="60000" />
+      <workItem from="1742757574521" duration="1911000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
@@ -172,7 +196,55 @@
       <option name="project" value="LOCAL" />
       <updated>1739870698061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed the Select Lorry stuff">
+      <option name="closed" value="true" />
+      <created>1742665325419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742665325419</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update Lorry class to account for extra space between items">
+      <option name="closed" value="true" />
+      <created>1742666196725</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742666196725</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Item Space">
+      <option name="closed" value="true" />
+      <created>1742666316683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742666316683</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update Lorry class to display volume in cubic meters and sort items in each lorry by weight">
+      <option name="closed" value="true" />
+      <created>1742684534101</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742684534101</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1742684562750</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742684562751</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update `btn_CalculateLoads_Click` to use async">
+      <option name="closed" value="true" />
+      <created>1742685000932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742685000932</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +263,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/SimonTest" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -210,6 +282,16 @@
     <MESSAGE value="Update README with new feature instructions" />
     <MESSAGE value="Add DisplayResults method, update SortItemsTest UI, and initialize components" />
     <MESSAGE value="Remove unnecessary whitespace and newline at the end of Project file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary whitespace and newline at the end of Project file" />
+    <MESSAGE value="Update Lorry class to account for extra" />
+    <MESSAGE value="Fixed the Select Lorry stuff" />
+    <MESSAGE value="Update Lorry class to account for extra space between items" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/SelectLorryFix' into SelectLorryFix&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.PSPKerrdige/.idea/workspace.xml" />
+    <MESSAGE value="Update Lorry class to display volume in cubi" />
+    <MESSAGE value="Item Space" />
+    <MESSAGE value="Update Lorry class to display volume in cubic meters and sort items in each lorry by weight" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="Update `btn_CalculateLoads_Click` to use async" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `btn_CalculateLoads_Click` to use async" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
