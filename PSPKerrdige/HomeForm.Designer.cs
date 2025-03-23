@@ -116,7 +116,7 @@
             btn_SelectLorry.Name = "btn_SelectLorry";
             btn_SelectLorry.Size = new System.Drawing.Size(353, 70);
             btn_SelectLorry.TabIndex = 2;
-            btn_SelectLorry.Text = "Select Lorry";
+            btn_SelectLorry.Text = "Select Lorry And Items";
             btn_SelectLorry.UseVisualStyleBackColor = false;
             btn_SelectLorry.Click += btn_SelectLorry_Click;
             // 
