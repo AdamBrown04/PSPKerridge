@@ -119,7 +119,7 @@ namespace PSPKerrdige
         {
             if (currentItemSort != null && currentItemSort.Lorries.Any())
             {
-                SelectLorry selectLorryForm = new SelectLorry(currentItemSort.Lorries);
+                SelectLorryAndItems selectLorryForm = new SelectLorryAndItems(currentItemSort.Lorries);
                 selectLorryForm.Show();
             }
             else

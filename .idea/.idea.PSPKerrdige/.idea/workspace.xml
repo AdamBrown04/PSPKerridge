@@ -8,8 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryAndItems.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PSPKerrdige/SelectLorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryAndItems.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="SelectLorryFix" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,8 +52,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="SelectItems" />
+                    <option name="lastUsedInstant" value="1742758643" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1742694579" />
+                    <option name="lastUsedInstant" value="1742758376" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="SelectLorryFix" />
@@ -68,29 +76,29 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AdamBrown04/PSPKerridge.git",
-    "accountId": "5edacee1-c73a-4479-80c1-6d109db08965"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AdamBrown04/PSPKerridge.git&quot;,
+    &quot;accountId&quot;: &quot;5edacee1-c73a-4479-80c1-6d109db08965&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "AdamBrown04",
-    "repository": "PSPKerridge"
+    &quot;owner&quot;: &quot;AdamBrown04&quot;,
+    &quot;repository&quot;: &quot;PSPKerridge&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Lorry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/simon/RiderProjects/PSPKerridge/PSPKerrdige/Lorry.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -115,7 +123,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.codegpt.services.codegpt",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -154,6 +162,10 @@
       <workItem from="1742227869779" duration="1119000" />
       <workItem from="1742485558377" duration="824000" />
       <workItem from="1742683318364" duration="5583000" />
+      <workItem from="1742757212611" duration="112000" />
+      <workItem from="1742757464419" duration="60000" />
+      <workItem from="1742757574521" duration="1911000" />
+      <workItem from="1742772051473" duration="1807000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
