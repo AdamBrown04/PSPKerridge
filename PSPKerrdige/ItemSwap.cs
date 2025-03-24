@@ -15,7 +15,7 @@ public class ItemSwap
     {
         // Return the sum of the volume of all items in all lorries as the fitness function
         // This is what compares whether a move is an improvement or not
-        return Lorries.Sum(lorry => lorry.LoadedItems.Sum(item => item.Volume));
+        return Lorries.Sum(lorry => lorry.LoadedItems.Sum(item => item.Weight / item.Volume));
     }
 
     public void MoveSelectedItem()
