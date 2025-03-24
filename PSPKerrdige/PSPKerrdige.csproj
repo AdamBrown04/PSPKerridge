@@ -12,9 +12,6 @@
       <Compile Update="SelectLorry.cs">
       <SubType>Form</SubType>
     </Compile>
-      <Compile Update="LoadItems.cs">
-          <SubType>Form</SubType>
-      </Compile>
   </ItemGroup>
 
 </Project>

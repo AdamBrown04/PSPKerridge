@@ -152,14 +152,5 @@ namespace PSPKerrdige
                 viewItemDetails.Show();
             }
         }
-
-        private void lbl_LoadInstructions_Click(object sender, EventArgs e)
-        {
-            if (currentItemSort != null)
-            {
-                LoadItems loadItemsForm = new LoadItems(currentItemSort.Lorries);
-                loadItemsForm.Show();
-            }
-        }
     }
 }
