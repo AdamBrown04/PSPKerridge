@@ -1,4 +1,5 @@
 namespace PSPKerrdige;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,7 @@ public class ItemSort
     public void Sort(float Weight, float Volume)
     {
         // Sort the items by weight in descending order
-        Items = Items.OrderByDescending(Item => Item.Weight).ToList();
-        
+        Items = Items.OrderByDescending(Item => Item.Weight / Item.Volume).ToList();
         // Loop through each item
         foreach (Item Item in Items)
         {
@@ -27,7 +27,7 @@ public class ItemSort
                 if (Lorry.MoveItem(Item))
                 {
                     Placed = true;
-                   break;
+                    break;
                 }
             }
 
@@ -49,6 +49,7 @@ public class ItemSort
         {
             result += Lorry.DisplayResults() + "\n";
         }
+
         return result;
     }
 

@@ -14,6 +14,8 @@ namespace PSPKerrdige
         public HomeForm()
         {
             InitializeComponent();
+            // Disable the Load Instructions button initially
+            lbl_LoadInstructions.Enabled = false;
         }
 
         private void btn_FileSelect_Click(object sender, EventArgs e)
@@ -72,13 +74,15 @@ namespace PSPKerrdige
                     // Optionally sort the loaded items in each lorry by weight.
                     foreach (var lorry in itemSwap.Lorries)
                     {
-                        lorry.LoadedItems = lorry.LoadedItems.OrderByDescending(item => item.Weight).ToList();
+                        lorry.LoadedItems = lorry.LoadedItems.OrderByDescending(item => item.Weight / item.Volume)
+                            .ToList();
                     }
 
                     currentItemSort = itemSort;
                     btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
                     btn_ShowItemDetails.Enabled = true;
+                    lbl_LoadInstructions.Enabled = true; // Enable the Load Instructions button
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();
@@ -142,10 +146,19 @@ namespace PSPKerrdige
 
         private void btn_ShowItemDetails_Click(object sender, EventArgs e)
         {
-            if(currentItemSort != null)
+            if (currentItemSort != null)
             {
                 ViewItemDetails viewItemDetails = new ViewItemDetails(currentItemSort.Items);
                 viewItemDetails.Show();
+            }
+        }
+
+        private void lbl_LoadInstructions_Click(object sender, EventArgs e)
+        {
+            if (currentItemSort != null)
+            {
+                LoadItems loadItemsForm = new LoadItems(currentItemSort.Lorries);
+                loadItemsForm.Show();
             }
         }
     }
