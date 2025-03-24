@@ -78,6 +78,7 @@ namespace PSPKerrdige
                     currentItemSort = itemSort;
                     btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
+                    btn_ShowItemDetails.Enabled = true;
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();
@@ -119,7 +120,7 @@ namespace PSPKerrdige
         {
             if (currentItemSort != null && currentItemSort.Lorries.Any())
             {
-                SelectLorryAndItems selectLorryForm = new SelectLorryAndItems(currentItemSort.Lorries);
+                SelectLorry selectLorryForm = new SelectLorry(currentItemSort.Lorries);
                 selectLorryForm.Show();
             }
             else
@@ -137,6 +138,15 @@ namespace PSPKerrdige
         private void lbl_Progress_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
+        }
+
+        private void btn_ShowItemDetails_Click(object sender, EventArgs e)
+        {
+            if(currentItemSort != null)
+            {
+                ViewItemDetails viewItemDetails = new ViewItemDetails(currentItemSort.Items);
+                viewItemDetails.Show();
+            }
         }
     }
 }
