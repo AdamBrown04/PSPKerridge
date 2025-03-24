@@ -7,12 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/HomeForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/LoadItems.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/LoadItems.Designer.cs" afterDir="false" />
-    </list>
+    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="Added to home form" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +152,7 @@
       <workItem from="1742772051473" duration="3140000" />
       <workItem from="1742809535031" duration="1301000" />
       <workItem from="1742815908266" duration="502000" />
+      <workItem from="1742816436757" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
@@ -246,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742778713458</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added to home form">
+      <option name="closed" value="true" />
+      <created>1742816588074</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742816588074</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +299,10 @@
     <MESSAGE value="Update `btn_CalculateLoads_Click` to use async" />
     <MESSAGE value="Merge pull request #28 from AdamBrown04/SelectItems&#10;&#10;Made chagnes to the select Lorry form to make sure it matches clsoer …" />
     <MESSAGE value="Update Item.cs and rename SelectLorry files to include Items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Item.cs and rename SelectLorry files to include Items" />
+    <MESSAGE value="Refactor and update UI layout and add load instructions button functionality" />
+    <MESSAGE value="Merge pull request #31 from AdamBrown04/SimonSprint2Day1&#10;&#10;Simon sprint2 day1" />
+    <MESSAGE value="Added to home form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to home form" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
