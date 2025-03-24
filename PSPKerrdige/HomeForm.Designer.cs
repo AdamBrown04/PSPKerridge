@@ -225,7 +225,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1007, 573);
+            ClientSize = new Size(1007, 575);
             Controls.Add(btn_ShowItemDetails);
             Controls.Add(lbl_Progress);
             Controls.Add(lbl_ProgessLabel);
