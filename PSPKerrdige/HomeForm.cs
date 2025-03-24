@@ -14,8 +14,6 @@ namespace PSPKerrdige
         public HomeForm()
         {
             InitializeComponent();
-            // Disable the Load Instructions button initially
-            lbl_LoadInstructions.Enabled = false;
         }
 
         private void btn_FileSelect_Click(object sender, EventArgs e)
@@ -82,7 +80,6 @@ namespace PSPKerrdige
                     btn_SelectLorry.Enabled = true;
                     btn_FileSave.Enabled = true;
                     btn_ShowItemDetails.Enabled = true;
-                    lbl_LoadInstructions.Enabled = true; // Enable the Load Instructions button
                     txb_Solution.Text = itemSort.DisplayResults();
                     lbl_NumOfLorries.Text = itemSort.DisplayTotalLorries();
                     lbl_TotalItems.Text = TotalItems.ToString();

@@ -7,7 +7,7 @@ namespace PSPKerrdige
         /// </summary>
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Button btn_ShowLorry;
-        private System.Windows.Forms.RichTextBox txb_ItemDetails;
+        private System.Windows.Forms.RichTextBox txb_LorryDetails;
         private System.Windows.Forms.Label lbl_LorryNumber;
 
         /// <summary>
@@ -32,10 +32,11 @@ namespace PSPKerrdige
         private void InitializeComponent()
         {
             btn_ShowLorry = new Button();
-            txb_ItemDetails = new RichTextBox();
+            txb_LorryDetails = new RichTextBox();
             lbl_LorryNumber = new Label();
             Nud_lorryNumber = new NumericUpDown();
             ReturnToMenu = new Button();
+            btn_saveLorry = new Button();
             ((System.ComponentModel.ISupportInitialize)Nud_lorryNumber).BeginInit();
             SuspendLayout();
             // 
@@ -51,14 +52,14 @@ namespace PSPKerrdige
             btn_ShowLorry.UseVisualStyleBackColor = false;
             btn_ShowLorry.Click += btn_ShowLorry_Click;
             // 
-            // txb_ItemDetails
+            // txb_LorryDetails
             // 
-            txb_ItemDetails.Location = new Point(12, 12);
-            txb_ItemDetails.Name = "txb_ItemDetails";
-            txb_ItemDetails.ReadOnly = true;
-            txb_ItemDetails.Size = new Size(588, 371);
-            txb_ItemDetails.TabIndex = 2;
-            txb_ItemDetails.Text = "";
+            txb_LorryDetails.Location = new Point(12, 12);
+            txb_LorryDetails.Name = "txb_LorryDetails";
+            txb_LorryDetails.ReadOnly = true;
+            txb_LorryDetails.Size = new Size(588, 371);
+            txb_LorryDetails.TabIndex = 2;
+            txb_LorryDetails.Text = "";
             // 
             // lbl_LorryNumber
             // 
@@ -91,15 +92,29 @@ namespace PSPKerrdige
             ReturnToMenu.UseVisualStyleBackColor = false;
             ReturnToMenu.Click += ReturnToMenu_Click;
             // 
+            // btn_saveLorry
+            // 
+            btn_saveLorry.BackColor = SystemColors.Info;
+            btn_saveLorry.Enabled = false;
+            btn_saveLorry.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_saveLorry.Location = new Point(607, 129);
+            btn_saveLorry.Name = "btn_saveLorry";
+            btn_saveLorry.Size = new Size(200, 75);
+            btn_saveLorry.TabIndex = 6;
+            btn_saveLorry.Text = "Save Lorry Information";
+            btn_saveLorry.UseVisualStyleBackColor = false;
+            btn_saveLorry.Click += btn_saveLorry_Click;
+            // 
             // SelectLorry
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 395);
+            Controls.Add(btn_saveLorry);
             Controls.Add(ReturnToMenu);
             Controls.Add(Nud_lorryNumber);
             Controls.Add(lbl_LorryNumber);
-            Controls.Add(txb_ItemDetails);
+            Controls.Add(txb_LorryDetails);
             Controls.Add(btn_ShowLorry);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "SelectLorry";
@@ -113,5 +128,6 @@ namespace PSPKerrdige
 
         private NumericUpDown Nud_lorryNumber;
         private Button ReturnToMenu;
+        private Button btn_saveLorry;
     }
 }
