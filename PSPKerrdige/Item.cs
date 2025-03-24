@@ -7,6 +7,8 @@ public class Item
     public int Count_Id { get; set; }
     public float Height { get; set; }
     public float Length { get; set; }
+    public float Radius { get; set; }
+
     public float SurfaceArea { get; set; }
     public string Type { get; set; }
     public float Volume { get; set; }
@@ -15,19 +17,21 @@ public class Item
     public float Width { get; set; }
 
     //constructor
-    public Item(int count_ID, int Count_Id, float height, float length, float surfaceArea, string type, float volume,
+    public Item(int count_ID, int Count_Id, float height, float radius,float length, float surfaceArea, string type, float volume,
         float weight, float width)
     {
         Count_ID = count_ID;
         this.Count_Id = Count_Id;
         Height = height;
         Length = length;
+        Radius = radius;
         SurfaceArea = surfaceArea;
         Type = type;
         Volume = volume;
         Weight = weight;
         Width = width;
         CorrectID();
+        RadiusToWL();
     }
 
     //methods
@@ -40,6 +44,15 @@ public class Item
         if (Count_ID < Count_Id)
         {
             Count_ID = Count_Id;
+        }
+    }
+
+    public void RadiusToWL()
+    {
+        if(Radius > 0)
+        {
+            Width = Radius * 2;
+            Length = Radius * 2;
         }
     }
 

@@ -23,6 +23,7 @@ namespace PSPKerrdige
                     int.Parse(data.Count_ID ?? "0"),
                     int.Parse(data.Count_Id ?? "0"),
                     float.Parse(data.Height ?? "0"),
+                    float.Parse(data.Radius ?? "0"),
                     float.Parse(data.Length ?? "0"),
                     float.Parse(data.SurfaceArea ?? "0"),
                     data.Type ?? string.Empty,
@@ -41,6 +42,7 @@ namespace PSPKerrdige
         public string Count_Id { get; set; }
         public string Height { get; set; }
         public string Length { get; set; }
+        public string Radius { get; set; }
         public string SurfaceArea { get; set; }
         public string Type { get; set; }
         public string Volume { get; set; }
