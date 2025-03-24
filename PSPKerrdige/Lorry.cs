@@ -65,11 +65,11 @@
                 float RemainingWeight = RemainingCapacity();
                 float UsedVolume = CurrentVolume / 1000000f; // Convert to M cubedd
                 float RemainingVolumeMeters = RemainingVolume() / 1000000f;
-                return "Lorry " + Lorry_ID + ": \n" + "Weight used: " + UsedWeight + " KG\n" + "Weight remaining: " +
+                return "Lorry " + Lorry_ID + "\n" + "Weight used: " + UsedWeight + " KG\n" + "Weight remaining: " +
                        RemainingWeight + " KG\n" + "Volume used: " + UsedVolume.ToString("F5") + " M³\n" +
                        "Volume remaining: " + RemainingVolumeMeters.ToString("F5") + " M³\n" + "Total items: " +
                        LoadedItems.Count + "\n" + "Items: \n" +
-                       string.Join(", ", LoadedItems.Select(item => item.Count_ID));
+                       string.Join(", ", LoadedItems.Select(item => item.Count_ID)) + "\n";
             }
             else
             {
