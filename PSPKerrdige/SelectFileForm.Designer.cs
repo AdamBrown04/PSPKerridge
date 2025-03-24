@@ -37,9 +37,10 @@
             // 
             // btn_FileFind
             // 
+            btn_FileFind.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_FileFind.Location = new Point(12, 12);
             btn_FileFind.Name = "btn_FileFind";
-            btn_FileFind.Size = new Size(391, 49);
+            btn_FileFind.Size = new Size(408, 49);
             btn_FileFind.TabIndex = 0;
             btn_FileFind.Text = "Select a File";
             btn_FileFind.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // btn_FileConfirm
             // 
             btn_FileConfirm.BackColor = SystemColors.Info;
+            btn_FileConfirm.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_FileConfirm.Location = new Point(12, 110);
             btn_FileConfirm.Name = "btn_FileConfirm";
-            btn_FileConfirm.Size = new Size(391, 49);
+            btn_FileConfirm.Size = new Size(408, 49);
             btn_FileConfirm.TabIndex = 1;
             btn_FileConfirm.Text = "Confirm File";
             btn_FileConfirm.UseVisualStyleBackColor = false;
@@ -59,9 +61,10 @@
             // btn_Return
             // 
             btn_Return.BackColor = SystemColors.Info;
+            btn_Return.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_Return.Location = new Point(12, 165);
             btn_Return.Name = "btn_Return";
-            btn_Return.Size = new Size(391, 49);
+            btn_Return.Size = new Size(408, 49);
             btn_Return.TabIndex = 2;
             btn_Return.Text = "Return to Menu";
             btn_Return.UseVisualStyleBackColor = false;
@@ -70,16 +73,17 @@
             // lbl_fileSelected
             // 
             lbl_fileSelected.AutoSize = true;
-            lbl_fileSelected.Location = new Point(12, 76);
+            lbl_fileSelected.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_fileSelected.Location = new Point(12, 73);
             lbl_fileSelected.Name = "lbl_fileSelected";
-            lbl_fileSelected.Size = new Size(94, 20);
+            lbl_fileSelected.Size = new Size(111, 25);
             lbl_fileSelected.TabIndex = 3;
             lbl_fileSelected.Text = "File selected:";
             // 
             // txb_FileSelected
             // 
             txb_FileSelected.Enabled = false;
-            txb_FileSelected.Location = new Point(112, 73);
+            txb_FileSelected.Location = new Point(129, 74);
             txb_FileSelected.Name = "txb_FileSelected";
             txb_FileSelected.ReadOnly = true;
             txb_FileSelected.Size = new Size(291, 27);
@@ -90,7 +94,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(415, 222);
+            ClientSize = new Size(428, 222);
             Controls.Add(txb_FileSelected);
             Controls.Add(lbl_fileSelected);
             Controls.Add(btn_Return);
