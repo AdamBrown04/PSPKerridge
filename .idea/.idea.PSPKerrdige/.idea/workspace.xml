@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryAndItemsOriginal.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PSPKerrdige/SelectLorryAndItemsOriginal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PSPKerrdige/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/Lorry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PSPKerrdige/PSPKerrdige.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="469839ea-5657-4d58-803d-f9b784319b84" name="Changes" comment="Added to home form" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,21 +96,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.PSPKerrdige.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "SimonSprint2Day1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.PSPKerrdige.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PSPKerrdige" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -157,6 +151,8 @@
       <workItem from="1742757574521" duration="1911000" />
       <workItem from="1742772051473" duration="3140000" />
       <workItem from="1742809535031" duration="1301000" />
+      <workItem from="1742815908266" duration="502000" />
+      <workItem from="1742816436757" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="changed form1 name to Home">
       <option name="closed" value="true" />
@@ -246,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742778713458</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added to home form">
+      <option name="closed" value="true" />
+      <created>1742816588074</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742816588074</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +299,10 @@
     <MESSAGE value="Update `btn_CalculateLoads_Click` to use async" />
     <MESSAGE value="Merge pull request #28 from AdamBrown04/SelectItems&#10;&#10;Made chagnes to the select Lorry form to make sure it matches clsoer …" />
     <MESSAGE value="Update Item.cs and rename SelectLorry files to include Items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Item.cs and rename SelectLorry files to include Items" />
+    <MESSAGE value="Refactor and update UI layout and add load instructions button functionality" />
+    <MESSAGE value="Merge pull request #31 from AdamBrown04/SimonSprint2Day1&#10;&#10;Simon sprint2 day1" />
+    <MESSAGE value="Added to home form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to home form" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

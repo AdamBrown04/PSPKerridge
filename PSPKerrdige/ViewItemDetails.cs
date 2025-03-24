@@ -13,6 +13,7 @@ namespace PSPKerrdige
     public partial class ViewItemDetails : Form
     {
         private List<Item> items;
+
         public ViewItemDetails(List<Item> items)
         {
             InitializeComponent();
@@ -22,7 +23,14 @@ namespace PSPKerrdige
 
         private void btn_ViewItem_Click(object sender, EventArgs e)
         {
-            txb_ItemDetails.Text = items[(int)nud_ItemID.Value - 1].DisplayItemDetails();
+            int itemId = (int)nud_ItemID.Value;
+
+            Item foundItem = items.FirstOrDefault(item => item.Count_ID == itemId);
+
+            if (foundItem != null)
+            {
+                txb_ItemDetails.Text = foundItem.DisplayItemDetails();
+            }
         }
 
         private void btn_ReturnToMenu_Click(object sender, EventArgs e)

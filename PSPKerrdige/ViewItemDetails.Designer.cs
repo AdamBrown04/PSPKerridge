@@ -98,6 +98,7 @@ namespace PSPKerrdige
             Controls.Add(label1);
             Controls.Add(nud_ItemID);
             Controls.Add(btn_ViewItem);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "ViewItemDetails";
             Text = "View Item Details";
             ((System.ComponentModel.ISupportInitialize)nud_ItemID).EndInit();
