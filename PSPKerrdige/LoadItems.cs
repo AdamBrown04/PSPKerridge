@@ -79,7 +79,7 @@ namespace PSPKerrdige
                 int Order = 1;
                 foreach (Item item in sortedItems)
                 {
-                    instructions.AppendLine("Order " + Order.ToString() + " ID: " + item.Count_ID);
+                    instructions.AppendLine("" + item.Count_ID);
                     Order++;
                 }
 
