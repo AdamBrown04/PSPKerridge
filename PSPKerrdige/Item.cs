@@ -58,14 +58,29 @@ public class Item
 
     public string DisplayItemDetails()
     {
-        return
-            "ID: " + Count_ID + "\n" +
-            "Height: " + Height + "\n" +
-            "Length: " + Length + "\n" +
-            "Surface Area: " + SurfaceArea + "\n" +
-            "Type: " + Type + "\n" +
-            "Volume: " + Volume + "\n" +
-            "Weight: " + Weight + "\n" +
-            "Width: " + Width;
+        string output = "";
+        if (Type == "Cylinder")
+        {
+            output = $"ID: {Count_ID} \n" +
+                $"Type: {Type} \n" +
+                $"Height: {Height} \n" +
+                $"Radius: {Radius} \n" +
+                $"Surface Area: {SurfaceArea} \n" +    
+                $"Volume: {Volume} \n" +
+                $"Weight: {Weight}";
+        }
+        else
+        {
+            output = $"ID: {Count_ID} \n" +
+                $"Type: {Type} \n" +
+                $"Height: {Height} \n" +
+                $"Radius: {Length} \n" +
+                $"Width: {Width}" +
+                $"Surface Area: {SurfaceArea} \n" +
+                $"Volume: {Volume} \n" +
+                $"Weight: {Weight}";
+        }
+
+        return output;
     }
 }

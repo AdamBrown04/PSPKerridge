@@ -51,7 +51,7 @@ namespace PSPKerrdige
                     itemSort.Sort(weight, volume);
 
                     ItemSwap itemSwap = new ItemSwap { Items = items, Lorries = itemSort.Lorries };
-                    int iterations = 500000;
+                    int iterations = 750000;
 
                     // Create a progress object to update the UI with the current progress
                     Progress<int> progress = new Progress<int>(percent =>

@@ -70,12 +70,18 @@ namespace PSPKerrdige
             }
             else
             {
-                //calls the getData method from the HomeForm class and passes the file path
-                homeForm.getData(txb_FileSelected.Text);
-                this.Close();
-            }
-            
+                string isJSON = txb_FileSelected.Text.Split('.').Last();
+                if (isJSON.ToUpper() != "JSON") 
+                {
+                    MessageBox.Show("Please select a JSON file.", "Invalid file type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //calls the getData method from the HomeForm class and passes the file path
+                    homeForm.getData(txb_FileSelected.Text);
+                    this.Close();
+                }   
+            } 
         }
-
     }
 }
