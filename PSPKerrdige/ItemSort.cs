@@ -47,7 +47,7 @@ public class ItemSort
         string result = "";
         foreach (Lorry Lorry in Lorries)
         {
-            result += Lorry.DisplayResults() + "\n";
+            result += Lorry.DisplayResults(false) + "\n";
         }
 
         return result;
