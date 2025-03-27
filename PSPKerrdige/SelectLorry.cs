@@ -25,7 +25,7 @@ namespace PSPKerrdige
 
                 if (index >= 0)
                 {
-                    txb_LorryDetails.Text = SortedLorrys[index].DisplayResults();
+                    txb_LorryDetails.Text = SortedLorrys[index].DisplayResults(true);
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace PSPKerrdige
             folderBrowserDialog.InitialDirectory = "c:\\";
             folderBrowserDialog.ShowNewFolderButton = true;
             DialogResult result = folderBrowserDialog.ShowDialog();
-            string fileName = $"Lorry{index}.txt";
+            string fileName = $"Lorry{index+1}.txt";
             if (result == DialogResult.OK)
             {
                 string folderPath = folderBrowserDialog.SelectedPath;                
